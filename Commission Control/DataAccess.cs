@@ -345,7 +345,7 @@ namespace D3.Commission
                     {
                         while (dr.Read())
                         {
-                            dataLine = new Object[13];
+                            dataLine = new Object[14];
                             dataLine[0] = true;
 
                             if (dr["Type"] != DBNull.Value)
@@ -428,9 +428,17 @@ namespace D3.Commission
                             {
                                 dataLine[10] = "";
                             }
-
-                            dataLine[11] = rate;
-                            dataLine[12] = "false";
+                            if (dr["Quantity"] != DBNull.Value)
+                            {
+                                dataLine[11] = String.Format("{0:f}", Convert.ToDecimal(dr["Quantity"]));
+                            }
+                            else
+                            {
+                                dataLine[11] = "";
+                            } 
+                            
+                            dataLine[12] = rate;
+                            dataLine[13] = "false";
                             temp.Add(dataLine);
                         }
                         tier1Data = new Object[temp.Count];
@@ -470,7 +478,7 @@ namespace D3.Commission
                     {
                         while (dr.Read())
                         {
-                            dataLine = new Object[13];
+                            dataLine = new Object[14];
                             dataLine[0] = true;
 
                             if (dr["Type"] != DBNull.Value)
@@ -553,9 +561,17 @@ namespace D3.Commission
                             {
                                 dataLine[10] = "";
                             }
+                            if (dr["Quantity"] != DBNull.Value)
+                            {
+                                dataLine[11] = String.Format("{0:f}", Convert.ToDecimal(dr["Quantity"]));
+                            }
+                            else
+                            {
+                                dataLine[11] = "";
+                            }
 
-                            dataLine[11] = rate;
-                            dataLine[12] = "false";
+                            dataLine[12] = rate;
+                            dataLine[13] = "false";
                             temp.Add(dataLine);
                         }
                         tier2Data = new Object[temp.Count];
@@ -595,7 +611,7 @@ namespace D3.Commission
                     {
                         while (dr.Read())
                         {
-                            dataLine = new Object[13];
+                            dataLine = new Object[14];
                             dataLine[0] = true;
 
                             if (dr["Type"] != DBNull.Value)
@@ -678,9 +694,17 @@ namespace D3.Commission
                             {
                                 dataLine[10] = "";
                             }
+                            if (dr["Quantity"] != DBNull.Value)
+                            {
+                                dataLine[11] = String.Format("{0:f}", Convert.ToDecimal(dr["Quantity"]));
+                            }
+                            else
+                            {
+                                dataLine[11] = "";
+                            }
 
-                            dataLine[11] = rate;
-                            dataLine[12] = "false";
+                            dataLine[12] = rate;
+                            dataLine[13] = "false";
                             temp.Add(dataLine);
                         }
                         renewalData = new Object[temp.Count];

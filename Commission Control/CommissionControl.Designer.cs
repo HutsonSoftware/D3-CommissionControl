@@ -30,7 +30,7 @@ namespace D3.Commission
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CommissionControl));
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Control = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label60 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
@@ -94,7 +94,7 @@ namespace D3.Commission
             this.PayCommission = new System.Windows.Forms.Button();
             this.SalesPerson = new System.Windows.Forms.ComboBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Training = new System.Windows.Forms.TabPage();
             this.TrainingAll = new System.Windows.Forms.CheckBox();
             this.TrainingCommission = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
@@ -106,7 +106,7 @@ namespace D3.Commission
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.TrainingGrid = new System.Windows.Forms.DataGridView();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.Projects = new System.Windows.Forms.TabPage();
             this.ProjectAll = new System.Windows.Forms.CheckBox();
             this.ProjectCommission = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
@@ -118,32 +118,10 @@ namespace D3.Commission
             this.ProjectPrice = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.ProjectGrid = new System.Windows.Forms.DataGridView();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.RenewalAll = new System.Windows.Forms.CheckBox();
-            this.Tier2All = new System.Windows.Forms.CheckBox();
+            this.Tier1 = new System.Windows.Forms.TabPage();
             this.Tier1All = new System.Windows.Forms.CheckBox();
-            this.RenewalCommission = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.Tier2Commission = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
             this.Tier1Commission = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.RenewalProfit = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.RenewalCost = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.RenewalPrice = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.RenewalGrid = new System.Windows.Forms.DataGridView();
-            this.Tier2Profit = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.Tier2Cost = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.Tier2Price = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.Tier2Grid = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.Tier1Profit = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -152,7 +130,31 @@ namespace D3.Commission
             this.Tier1Price = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.Tier1Grid = new System.Windows.Forms.DataGridView();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.Tier2 = new System.Windows.Forms.TabPage();
+            this.Tier2All = new System.Windows.Forms.CheckBox();
+            this.Tier2Commission = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.Tier2Profit = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.Tier2Cost = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.Tier2Price = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.Tier2Grid = new System.Windows.Forms.DataGridView();
+            this.SubRenewals = new System.Windows.Forms.TabPage();
+            this.RenewalAll = new System.Windows.Forms.CheckBox();
+            this.RenewalCommission = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.RenewalProfit = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.RenewalCost = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.RenewalPrice = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.RenewalGrid = new System.Windows.Forms.DataGridView();
+            this.Incomplete = new System.Windows.Forms.TabPage();
             this.IncompleteAll = new System.Windows.Forms.CheckBox();
             this.IncompleteCommission = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
@@ -164,7 +166,7 @@ namespace D3.Commission
             this.label43 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.IncompleteGrid = new System.Windows.Forms.DataGridView();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.Prior = new System.Windows.Forms.TabPage();
             this.PriorAll = new System.Windows.Forms.CheckBox();
             this.PriorCommission = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
@@ -185,21 +187,23 @@ namespace D3.Commission
             this.configToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.Control.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.Training.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TrainingGrid)).BeginInit();
-            this.tabPage3.SuspendLayout();
+            this.Projects.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProjectGrid)).BeginInit();
-            this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RenewalGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Tier2Grid)).BeginInit();
+            this.Tier1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Tier1Grid)).BeginInit();
-            this.tabPage5.SuspendLayout();
+            this.Tier2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Tier2Grid)).BeginInit();
+            this.SubRenewals.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RenewalGrid)).BeginInit();
+            this.Incomplete.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IncompleteGrid)).BeginInit();
-            this.tabPage6.SuspendLayout();
+            this.Prior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PriorGrid)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -209,32 +213,34 @@ namespace D3.Commission
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Controls.Add(this.tabPage6);
+            this.tabControl1.Controls.Add(this.Control);
+            this.tabControl1.Controls.Add(this.Training);
+            this.tabControl1.Controls.Add(this.Projects);
+            this.tabControl1.Controls.Add(this.Tier1);
+            this.tabControl1.Controls.Add(this.Tier2);
+            this.tabControl1.Controls.Add(this.SubRenewals);
+            this.tabControl1.Controls.Add(this.Incomplete);
+            this.tabControl1.Controls.Add(this.Prior);
             this.tabControl1.Location = new System.Drawing.Point(12, 39);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(992, 690);
+            this.tabControl1.Size = new System.Drawing.Size(1036, 690);
             this.tabControl1.TabIndex = 0;
             // 
-            // tabPage1
+            // Control
             // 
-            this.tabPage1.AutoScroll = true;
-            this.tabPage1.AutoScrollMinSize = new System.Drawing.Size(775, 660);
-            this.tabPage1.Controls.Add(this.groupBox3);
-            this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Controls.Add(this.progressBar1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(984, 664);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Control";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.Control.AutoScroll = true;
+            this.Control.AutoScrollMinSize = new System.Drawing.Size(775, 660);
+            this.Control.Controls.Add(this.groupBox3);
+            this.Control.Controls.Add(this.groupBox1);
+            this.Control.Controls.Add(this.progressBar1);
+            this.Control.Location = new System.Drawing.Point(4, 22);
+            this.Control.Name = "Control";
+            this.Control.Padding = new System.Windows.Forms.Padding(3);
+            this.Control.Size = new System.Drawing.Size(1028, 664);
+            this.Control.TabIndex = 0;
+            this.Control.Text = "Control";
+            this.Control.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -256,7 +262,7 @@ namespace D3.Commission
             this.groupBox3.Controls.Add(this.label45);
             this.groupBox3.Location = new System.Drawing.Point(6, 235);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(969, 423);
+            this.groupBox3.Size = new System.Drawing.Size(1016, 423);
             this.groupBox3.TabIndex = 121;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Summary";
@@ -743,7 +749,7 @@ namespace D3.Commission
             this.groupBox1.Controls.Add(this.SalesPerson);
             this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(969, 196);
+            this.groupBox1.Size = new System.Drawing.Size(1016, 196);
             this.groupBox1.TabIndex = 119;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Current Performance Based Pay";
@@ -780,7 +786,7 @@ namespace D3.Commission
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(671, 22);
+            this.label28.Location = new System.Drawing.Point(718, 19);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(74, 17);
             this.label28.TabIndex = 0;
@@ -788,7 +794,7 @@ namespace D3.Commission
             // 
             // PayDate
             // 
-            this.PayDate.Location = new System.Drawing.Point(751, 19);
+            this.PayDate.Location = new System.Drawing.Point(798, 19);
             this.PayDate.Name = "PayDate";
             this.PayDate.Size = new System.Drawing.Size(212, 20);
             this.PayDate.TabIndex = 0;
@@ -826,7 +832,7 @@ namespace D3.Commission
             // PayCommission
             // 
             this.PayCommission.BackColor = System.Drawing.Color.Tomato;
-            this.PayCommission.Location = new System.Drawing.Point(865, 45);
+            this.PayCommission.Location = new System.Drawing.Point(912, 45);
             this.PayCommission.Name = "PayCommission";
             this.PayCommission.Size = new System.Drawing.Size(98, 57);
             this.PayCommission.TabIndex = 3;
@@ -847,40 +853,40 @@ namespace D3.Commission
             // 
             this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar1.Location = new System.Drawing.Point(6, 209);
+            this.progressBar1.Location = new System.Drawing.Point(15, 209);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(563, 20);
+            this.progressBar1.Size = new System.Drawing.Size(1001, 20);
             this.progressBar1.TabIndex = 118;
             // 
-            // tabPage2
+            // Training
             // 
-            this.tabPage2.AutoScroll = true;
-            this.tabPage2.AutoScrollMinSize = new System.Drawing.Size(775, 660);
-            this.tabPage2.Controls.Add(this.TrainingAll);
-            this.tabPage2.Controls.Add(this.TrainingCommission);
-            this.tabPage2.Controls.Add(this.label29);
-            this.tabPage2.Controls.Add(this.TrainingProfit);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.TrainingCost);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.TrainingPrice);
-            this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Controls.Add(this.TrainingGrid);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(984, 664);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Training";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.Training.AutoScroll = true;
+            this.Training.AutoScrollMinSize = new System.Drawing.Size(775, 660);
+            this.Training.Controls.Add(this.TrainingAll);
+            this.Training.Controls.Add(this.TrainingCommission);
+            this.Training.Controls.Add(this.label29);
+            this.Training.Controls.Add(this.TrainingProfit);
+            this.Training.Controls.Add(this.label6);
+            this.Training.Controls.Add(this.TrainingCost);
+            this.Training.Controls.Add(this.label4);
+            this.Training.Controls.Add(this.TrainingPrice);
+            this.Training.Controls.Add(this.label2);
+            this.Training.Controls.Add(this.label1);
+            this.Training.Controls.Add(this.TrainingGrid);
+            this.Training.Location = new System.Drawing.Point(4, 22);
+            this.Training.Name = "Training";
+            this.Training.Padding = new System.Windows.Forms.Padding(3);
+            this.Training.Size = new System.Drawing.Size(1028, 664);
+            this.Training.TabIndex = 1;
+            this.Training.Text = "Training";
+            this.Training.UseVisualStyleBackColor = true;
             // 
             // TrainingAll
             // 
             this.TrainingAll.AutoSize = true;
             this.TrainingAll.Checked = true;
             this.TrainingAll.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.TrainingAll.Location = new System.Drawing.Point(9, 47);
+            this.TrainingAll.Location = new System.Drawing.Point(23, 23);
             this.TrainingAll.Name = "TrainingAll";
             this.TrainingAll.Size = new System.Drawing.Size(37, 17);
             this.TrainingAll.TabIndex = 119;
@@ -893,7 +899,7 @@ namespace D3.Commission
             this.TrainingCommission.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TrainingCommission.AutoSize = true;
             this.TrainingCommission.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TrainingCommission.Location = new System.Drawing.Point(911, 46);
+            this.TrainingCommission.Location = new System.Drawing.Point(927, 22);
             this.TrainingCommission.Name = "TrainingCommission";
             this.TrainingCommission.Size = new System.Drawing.Size(40, 17);
             this.TrainingCommission.TabIndex = 107;
@@ -904,7 +910,7 @@ namespace D3.Commission
             this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(812, 46);
+            this.label29.Location = new System.Drawing.Point(883, 22);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(38, 17);
             this.label29.TabIndex = 106;
@@ -915,7 +921,7 @@ namespace D3.Commission
             this.TrainingProfit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TrainingProfit.AutoSize = true;
             this.TrainingProfit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TrainingProfit.Location = new System.Drawing.Point(728, 46);
+            this.TrainingProfit.Location = new System.Drawing.Point(777, 22);
             this.TrainingProfit.Name = "TrainingProfit";
             this.TrainingProfit.Size = new System.Drawing.Size(40, 17);
             this.TrainingProfit.TabIndex = 105;
@@ -926,7 +932,7 @@ namespace D3.Commission
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(675, 46);
+            this.label6.Location = new System.Drawing.Point(724, 22);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 17);
             this.label6.TabIndex = 104;
@@ -937,7 +943,7 @@ namespace D3.Commission
             this.TrainingCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TrainingCost.AutoSize = true;
             this.TrainingCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TrainingCost.Location = new System.Drawing.Point(403, 46);
+            this.TrainingCost.Location = new System.Drawing.Point(477, 22);
             this.TrainingCost.Name = "TrainingCost";
             this.TrainingCost.Size = new System.Drawing.Size(40, 17);
             this.TrainingCost.TabIndex = 103;
@@ -948,7 +954,7 @@ namespace D3.Commission
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(357, 46);
+            this.label4.Location = new System.Drawing.Point(431, 22);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 17);
             this.label4.TabIndex = 102;
@@ -959,7 +965,7 @@ namespace D3.Commission
             this.TrainingPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TrainingPrice.AutoSize = true;
             this.TrainingPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TrainingPrice.Location = new System.Drawing.Point(577, 46);
+            this.TrainingPrice.Location = new System.Drawing.Point(627, 22);
             this.TrainingPrice.Name = "TrainingPrice";
             this.TrainingPrice.Size = new System.Drawing.Size(40, 17);
             this.TrainingPrice.TabIndex = 101;
@@ -970,7 +976,7 @@ namespace D3.Commission
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(526, 46);
+            this.label2.Location = new System.Drawing.Point(576, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 17);
             this.label2.TabIndex = 100;
@@ -980,7 +986,7 @@ namespace D3.Commission
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 22);
+            this.label1.Location = new System.Drawing.Point(6, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 17);
             this.label1.TabIndex = 99;
@@ -997,40 +1003,40 @@ namespace D3.Commission
             this.TrainingGrid.BackgroundColor = System.Drawing.SystemColors.Control;
             this.TrainingGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TrainingGrid.GridColor = System.Drawing.SystemColors.Control;
-            this.TrainingGrid.Location = new System.Drawing.Point(6, 74);
+            this.TrainingGrid.Location = new System.Drawing.Point(6, 46);
             this.TrainingGrid.Name = "TrainingGrid";
-            this.TrainingGrid.Size = new System.Drawing.Size(972, 584);
+            this.TrainingGrid.Size = new System.Drawing.Size(1016, 612);
             this.TrainingGrid.TabIndex = 98;
             // 
-            // tabPage3
+            // Projects
             // 
-            this.tabPage3.AutoScroll = true;
-            this.tabPage3.AutoScrollMinSize = new System.Drawing.Size(775, 660);
-            this.tabPage3.Controls.Add(this.ProjectAll);
-            this.tabPage3.Controls.Add(this.ProjectCommission);
-            this.tabPage3.Controls.Add(this.label30);
-            this.tabPage3.Controls.Add(this.label3);
-            this.tabPage3.Controls.Add(this.ProjectProfit);
-            this.tabPage3.Controls.Add(this.label5);
-            this.tabPage3.Controls.Add(this.ProjectCost);
-            this.tabPage3.Controls.Add(this.label8);
-            this.tabPage3.Controls.Add(this.ProjectPrice);
-            this.tabPage3.Controls.Add(this.label10);
-            this.tabPage3.Controls.Add(this.ProjectGrid);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(984, 664);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Projects";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.Projects.AutoScroll = true;
+            this.Projects.AutoScrollMinSize = new System.Drawing.Size(775, 660);
+            this.Projects.Controls.Add(this.ProjectAll);
+            this.Projects.Controls.Add(this.ProjectCommission);
+            this.Projects.Controls.Add(this.label30);
+            this.Projects.Controls.Add(this.label3);
+            this.Projects.Controls.Add(this.ProjectProfit);
+            this.Projects.Controls.Add(this.label5);
+            this.Projects.Controls.Add(this.ProjectCost);
+            this.Projects.Controls.Add(this.label8);
+            this.Projects.Controls.Add(this.ProjectPrice);
+            this.Projects.Controls.Add(this.label10);
+            this.Projects.Controls.Add(this.ProjectGrid);
+            this.Projects.Location = new System.Drawing.Point(4, 22);
+            this.Projects.Name = "Projects";
+            this.Projects.Padding = new System.Windows.Forms.Padding(3);
+            this.Projects.Size = new System.Drawing.Size(1028, 664);
+            this.Projects.TabIndex = 2;
+            this.Projects.Text = "Projects";
+            this.Projects.UseVisualStyleBackColor = true;
             // 
             // ProjectAll
             // 
             this.ProjectAll.AutoSize = true;
             this.ProjectAll.Checked = true;
             this.ProjectAll.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ProjectAll.Location = new System.Drawing.Point(9, 47);
+            this.ProjectAll.Location = new System.Drawing.Point(23, 23);
             this.ProjectAll.Name = "ProjectAll";
             this.ProjectAll.Size = new System.Drawing.Size(37, 17);
             this.ProjectAll.TabIndex = 119;
@@ -1043,7 +1049,7 @@ namespace D3.Commission
             this.ProjectCommission.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ProjectCommission.AutoSize = true;
             this.ProjectCommission.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProjectCommission.Location = new System.Drawing.Point(911, 46);
+            this.ProjectCommission.Location = new System.Drawing.Point(964, 22);
             this.ProjectCommission.Name = "ProjectCommission";
             this.ProjectCommission.Size = new System.Drawing.Size(40, 17);
             this.ProjectCommission.TabIndex = 114;
@@ -1054,7 +1060,7 @@ namespace D3.Commission
             this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(812, 46);
+            this.label30.Location = new System.Drawing.Point(920, 23);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(38, 17);
             this.label30.TabIndex = 113;
@@ -1064,7 +1070,7 @@ namespace D3.Commission
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 22);
+            this.label3.Location = new System.Drawing.Point(6, 3);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 17);
             this.label3.TabIndex = 112;
@@ -1075,7 +1081,7 @@ namespace D3.Commission
             this.ProjectProfit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ProjectProfit.AutoSize = true;
             this.ProjectProfit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProjectProfit.Location = new System.Drawing.Point(722, 46);
+            this.ProjectProfit.Location = new System.Drawing.Point(814, 22);
             this.ProjectProfit.Name = "ProjectProfit";
             this.ProjectProfit.Size = new System.Drawing.Size(40, 17);
             this.ProjectProfit.TabIndex = 111;
@@ -1086,7 +1092,7 @@ namespace D3.Commission
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(669, 46);
+            this.label5.Location = new System.Drawing.Point(761, 22);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 17);
             this.label5.TabIndex = 110;
@@ -1097,7 +1103,7 @@ namespace D3.Commission
             this.ProjectCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ProjectCost.AutoSize = true;
             this.ProjectCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProjectCost.Location = new System.Drawing.Point(397, 46);
+            this.ProjectCost.Location = new System.Drawing.Point(514, 22);
             this.ProjectCost.Name = "ProjectCost";
             this.ProjectCost.Size = new System.Drawing.Size(40, 17);
             this.ProjectCost.TabIndex = 109;
@@ -1108,7 +1114,7 @@ namespace D3.Commission
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(351, 46);
+            this.label8.Location = new System.Drawing.Point(468, 22);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(40, 17);
             this.label8.TabIndex = 108;
@@ -1119,7 +1125,7 @@ namespace D3.Commission
             this.ProjectPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ProjectPrice.AutoSize = true;
             this.ProjectPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProjectPrice.Location = new System.Drawing.Point(571, 46);
+            this.ProjectPrice.Location = new System.Drawing.Point(664, 22);
             this.ProjectPrice.Name = "ProjectPrice";
             this.ProjectPrice.Size = new System.Drawing.Size(40, 17);
             this.ProjectPrice.TabIndex = 107;
@@ -1130,7 +1136,7 @@ namespace D3.Commission
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(520, 46);
+            this.label10.Location = new System.Drawing.Point(613, 22);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(45, 17);
             this.label10.TabIndex = 106;
@@ -1147,148 +1153,52 @@ namespace D3.Commission
             this.ProjectGrid.BackgroundColor = System.Drawing.SystemColors.Control;
             this.ProjectGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ProjectGrid.GridColor = System.Drawing.SystemColors.Control;
-            this.ProjectGrid.Location = new System.Drawing.Point(6, 66);
+            this.ProjectGrid.Location = new System.Drawing.Point(6, 46);
             this.ProjectGrid.Name = "ProjectGrid";
-            this.ProjectGrid.Size = new System.Drawing.Size(972, 597);
+            this.ProjectGrid.Size = new System.Drawing.Size(1016, 612);
             this.ProjectGrid.TabIndex = 105;
             // 
-            // tabPage4
+            // Tier1
             // 
-            this.tabPage4.AutoScroll = true;
-            this.tabPage4.AutoScrollMinSize = new System.Drawing.Size(775, 660);
-            this.tabPage4.Controls.Add(this.RenewalAll);
-            this.tabPage4.Controls.Add(this.Tier2All);
-            this.tabPage4.Controls.Add(this.Tier1All);
-            this.tabPage4.Controls.Add(this.RenewalCommission);
-            this.tabPage4.Controls.Add(this.label33);
-            this.tabPage4.Controls.Add(this.Tier2Commission);
-            this.tabPage4.Controls.Add(this.label32);
-            this.tabPage4.Controls.Add(this.Tier1Commission);
-            this.tabPage4.Controls.Add(this.label31);
-            this.tabPage4.Controls.Add(this.label26);
-            this.tabPage4.Controls.Add(this.label24);
-            this.tabPage4.Controls.Add(this.RenewalProfit);
-            this.tabPage4.Controls.Add(this.label21);
-            this.tabPage4.Controls.Add(this.RenewalCost);
-            this.tabPage4.Controls.Add(this.label23);
-            this.tabPage4.Controls.Add(this.RenewalPrice);
-            this.tabPage4.Controls.Add(this.label25);
-            this.tabPage4.Controls.Add(this.RenewalGrid);
-            this.tabPage4.Controls.Add(this.Tier2Profit);
-            this.tabPage4.Controls.Add(this.label14);
-            this.tabPage4.Controls.Add(this.Tier2Cost);
-            this.tabPage4.Controls.Add(this.label17);
-            this.tabPage4.Controls.Add(this.Tier2Price);
-            this.tabPage4.Controls.Add(this.label19);
-            this.tabPage4.Controls.Add(this.Tier2Grid);
-            this.tabPage4.Controls.Add(this.label7);
-            this.tabPage4.Controls.Add(this.Tier1Profit);
-            this.tabPage4.Controls.Add(this.label11);
-            this.tabPage4.Controls.Add(this.Tier1Cost);
-            this.tabPage4.Controls.Add(this.label13);
-            this.tabPage4.Controls.Add(this.Tier1Price);
-            this.tabPage4.Controls.Add(this.label15);
-            this.tabPage4.Controls.Add(this.Tier1Grid);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(984, 664);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Products";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // RenewalAll
-            // 
-            this.RenewalAll.AutoSize = true;
-            this.RenewalAll.Checked = true;
-            this.RenewalAll.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.RenewalAll.Location = new System.Drawing.Point(119, 455);
-            this.RenewalAll.Name = "RenewalAll";
-            this.RenewalAll.Size = new System.Drawing.Size(37, 17);
-            this.RenewalAll.TabIndex = 145;
-            this.RenewalAll.Text = "All";
-            this.RenewalAll.UseVisualStyleBackColor = true;
-            this.RenewalAll.CheckedChanged += new System.EventHandler(this.RenewalAll_CheckedChanged);
-            // 
-            // Tier2All
-            // 
-            this.Tier2All.AutoSize = true;
-            this.Tier2All.Checked = true;
-            this.Tier2All.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.Tier2All.Location = new System.Drawing.Point(60, 231);
-            this.Tier2All.Name = "Tier2All";
-            this.Tier2All.Size = new System.Drawing.Size(37, 17);
-            this.Tier2All.TabIndex = 144;
-            this.Tier2All.Text = "All";
-            this.Tier2All.UseVisualStyleBackColor = true;
-            this.Tier2All.CheckedChanged += new System.EventHandler(this.Tier2All_CheckedChanged);
+            this.Tier1.Controls.Add(this.Tier1All);
+            this.Tier1.Controls.Add(this.Tier1Commission);
+            this.Tier1.Controls.Add(this.label31);
+            this.Tier1.Controls.Add(this.label7);
+            this.Tier1.Controls.Add(this.Tier1Profit);
+            this.Tier1.Controls.Add(this.label11);
+            this.Tier1.Controls.Add(this.Tier1Cost);
+            this.Tier1.Controls.Add(this.label13);
+            this.Tier1.Controls.Add(this.Tier1Price);
+            this.Tier1.Controls.Add(this.label15);
+            this.Tier1.Controls.Add(this.Tier1Grid);
+            this.Tier1.Location = new System.Drawing.Point(4, 22);
+            this.Tier1.Name = "Tier1";
+            this.Tier1.Size = new System.Drawing.Size(1028, 664);
+            this.Tier1.TabIndex = 6;
+            this.Tier1.Text = "Tier1 Products";
+            this.Tier1.UseVisualStyleBackColor = true;
             // 
             // Tier1All
             // 
             this.Tier1All.AutoSize = true;
             this.Tier1All.Checked = true;
             this.Tier1All.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.Tier1All.Location = new System.Drawing.Point(60, 4);
+            this.Tier1All.Location = new System.Drawing.Point(23, 23);
             this.Tier1All.Name = "Tier1All";
             this.Tier1All.Size = new System.Drawing.Size(37, 17);
-            this.Tier1All.TabIndex = 143;
+            this.Tier1All.TabIndex = 154;
             this.Tier1All.Text = "All";
             this.Tier1All.UseVisualStyleBackColor = true;
-            this.Tier1All.CheckedChanged += new System.EventHandler(this.Tier1All_CheckedChanged);
-            // 
-            // RenewalCommission
-            // 
-            this.RenewalCommission.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.RenewalCommission.AutoSize = true;
-            this.RenewalCommission.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RenewalCommission.Location = new System.Drawing.Point(909, 455);
-            this.RenewalCommission.Name = "RenewalCommission";
-            this.RenewalCommission.Size = new System.Drawing.Size(40, 17);
-            this.RenewalCommission.TabIndex = 142;
-            this.RenewalCommission.Text = "0.00";
-            // 
-            // label33
-            // 
-            this.label33.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(810, 454);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(38, 17);
-            this.label33.TabIndex = 141;
-            this.label33.Text = "PBP";
-            // 
-            // Tier2Commission
-            // 
-            this.Tier2Commission.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Tier2Commission.AutoSize = true;
-            this.Tier2Commission.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tier2Commission.Location = new System.Drawing.Point(909, 229);
-            this.Tier2Commission.Name = "Tier2Commission";
-            this.Tier2Commission.Size = new System.Drawing.Size(40, 17);
-            this.Tier2Commission.TabIndex = 140;
-            this.Tier2Commission.Text = "0.00";
-            // 
-            // label32
-            // 
-            this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(810, 229);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(38, 17);
-            this.label32.TabIndex = 139;
-            this.label32.Text = "PBP";
             // 
             // Tier1Commission
             // 
             this.Tier1Commission.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Tier1Commission.AutoSize = true;
             this.Tier1Commission.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tier1Commission.Location = new System.Drawing.Point(909, 3);
+            this.Tier1Commission.Location = new System.Drawing.Point(944, 22);
             this.Tier1Commission.Name = "Tier1Commission";
             this.Tier1Commission.Size = new System.Drawing.Size(40, 17);
-            this.Tier1Commission.TabIndex = 138;
+            this.Tier1Commission.TabIndex = 153;
             this.Tier1Commission.Text = "0.00";
             // 
             // label31
@@ -1296,202 +1206,20 @@ namespace D3.Commission
             this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(810, 3);
+            this.label31.Location = new System.Drawing.Point(900, 22);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(38, 17);
-            this.label31.TabIndex = 137;
+            this.label31.TabIndex = 152;
             this.label31.Text = "PBP";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(3, 454);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(110, 17);
-            this.label26.TabIndex = 136;
-            this.label26.Text = "Sub Renewals";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(3, 229);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(51, 17);
-            this.label24.TabIndex = 135;
-            this.label24.Text = "Tier 2";
-            // 
-            // RenewalProfit
-            // 
-            this.RenewalProfit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.RenewalProfit.AutoSize = true;
-            this.RenewalProfit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RenewalProfit.Location = new System.Drawing.Point(711, 454);
-            this.RenewalProfit.Name = "RenewalProfit";
-            this.RenewalProfit.Size = new System.Drawing.Size(40, 17);
-            this.RenewalProfit.TabIndex = 134;
-            this.RenewalProfit.Text = "0.00";
-            // 
-            // label21
-            // 
-            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(658, 454);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(47, 17);
-            this.label21.TabIndex = 133;
-            this.label21.Text = "Profit";
-            // 
-            // RenewalCost
-            // 
-            this.RenewalCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.RenewalCost.AutoSize = true;
-            this.RenewalCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RenewalCost.Location = new System.Drawing.Point(386, 454);
-            this.RenewalCost.Name = "RenewalCost";
-            this.RenewalCost.Size = new System.Drawing.Size(40, 17);
-            this.RenewalCost.TabIndex = 132;
-            this.RenewalCost.Text = "0.00";
-            // 
-            // label23
-            // 
-            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(340, 454);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(40, 17);
-            this.label23.TabIndex = 131;
-            this.label23.Text = "Cost";
-            // 
-            // RenewalPrice
-            // 
-            this.RenewalPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.RenewalPrice.AutoSize = true;
-            this.RenewalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RenewalPrice.Location = new System.Drawing.Point(560, 454);
-            this.RenewalPrice.Name = "RenewalPrice";
-            this.RenewalPrice.Size = new System.Drawing.Size(40, 17);
-            this.RenewalPrice.TabIndex = 130;
-            this.RenewalPrice.Text = "0.00";
-            // 
-            // label25
-            // 
-            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(509, 454);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(45, 17);
-            this.label25.TabIndex = 129;
-            this.label25.Text = "Price";
-            // 
-            // RenewalGrid
-            // 
-            this.RenewalGrid.AllowUserToAddRows = false;
-            this.RenewalGrid.AllowUserToDeleteRows = false;
-            this.RenewalGrid.AllowUserToOrderColumns = true;
-            this.RenewalGrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.RenewalGrid.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.RenewalGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.RenewalGrid.GridColor = System.Drawing.SystemColors.Control;
-            this.RenewalGrid.Location = new System.Drawing.Point(3, 474);
-            this.RenewalGrid.Name = "RenewalGrid";
-            this.RenewalGrid.Size = new System.Drawing.Size(972, 182);
-            this.RenewalGrid.TabIndex = 128;
-            // 
-            // Tier2Profit
-            // 
-            this.Tier2Profit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Tier2Profit.AutoSize = true;
-            this.Tier2Profit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tier2Profit.Location = new System.Drawing.Point(711, 229);
-            this.Tier2Profit.Name = "Tier2Profit";
-            this.Tier2Profit.Size = new System.Drawing.Size(40, 17);
-            this.Tier2Profit.TabIndex = 127;
-            this.Tier2Profit.Text = "0.00";
-            // 
-            // label14
-            // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(658, 229);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(47, 17);
-            this.label14.TabIndex = 126;
-            this.label14.Text = "Profit";
-            // 
-            // Tier2Cost
-            // 
-            this.Tier2Cost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Tier2Cost.AutoSize = true;
-            this.Tier2Cost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tier2Cost.Location = new System.Drawing.Point(386, 230);
-            this.Tier2Cost.Name = "Tier2Cost";
-            this.Tier2Cost.Size = new System.Drawing.Size(40, 17);
-            this.Tier2Cost.TabIndex = 125;
-            this.Tier2Cost.Text = "0.00";
-            // 
-            // label17
-            // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(340, 229);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(40, 17);
-            this.label17.TabIndex = 124;
-            this.label17.Text = "Cost";
-            // 
-            // Tier2Price
-            // 
-            this.Tier2Price.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Tier2Price.AutoSize = true;
-            this.Tier2Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tier2Price.Location = new System.Drawing.Point(560, 229);
-            this.Tier2Price.Name = "Tier2Price";
-            this.Tier2Price.Size = new System.Drawing.Size(40, 17);
-            this.Tier2Price.TabIndex = 123;
-            this.Tier2Price.Text = "0.00";
-            // 
-            // label19
-            // 
-            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(509, 229);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(45, 17);
-            this.label19.TabIndex = 122;
-            this.label19.Text = "Price";
-            // 
-            // Tier2Grid
-            // 
-            this.Tier2Grid.AllowUserToAddRows = false;
-            this.Tier2Grid.AllowUserToDeleteRows = false;
-            this.Tier2Grid.AllowUserToOrderColumns = true;
-            this.Tier2Grid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Tier2Grid.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.Tier2Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Tier2Grid.GridColor = System.Drawing.SystemColors.Control;
-            this.Tier2Grid.Location = new System.Drawing.Point(3, 249);
-            this.Tier2Grid.Name = "Tier2Grid";
-            this.Tier2Grid.Size = new System.Drawing.Size(972, 182);
-            this.Tier2Grid.TabIndex = 121;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 3);
+            this.label7.Location = new System.Drawing.Point(6, 3);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 17);
-            this.label7.TabIndex = 120;
+            this.label7.TabIndex = 151;
             this.label7.Text = "Tier 1";
             // 
             // Tier1Profit
@@ -1499,10 +1227,10 @@ namespace D3.Commission
             this.Tier1Profit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Tier1Profit.AutoSize = true;
             this.Tier1Profit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tier1Profit.Location = new System.Drawing.Point(711, 3);
+            this.Tier1Profit.Location = new System.Drawing.Point(794, 22);
             this.Tier1Profit.Name = "Tier1Profit";
             this.Tier1Profit.Size = new System.Drawing.Size(40, 17);
-            this.Tier1Profit.TabIndex = 119;
+            this.Tier1Profit.TabIndex = 150;
             this.Tier1Profit.Text = "0.00";
             // 
             // label11
@@ -1510,10 +1238,10 @@ namespace D3.Commission
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(658, 3);
+            this.label11.Location = new System.Drawing.Point(741, 22);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(47, 17);
-            this.label11.TabIndex = 118;
+            this.label11.TabIndex = 149;
             this.label11.Text = "Profit";
             // 
             // Tier1Cost
@@ -1521,10 +1249,10 @@ namespace D3.Commission
             this.Tier1Cost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Tier1Cost.AutoSize = true;
             this.Tier1Cost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tier1Cost.Location = new System.Drawing.Point(386, 4);
+            this.Tier1Cost.Location = new System.Drawing.Point(494, 22);
             this.Tier1Cost.Name = "Tier1Cost";
             this.Tier1Cost.Size = new System.Drawing.Size(40, 17);
-            this.Tier1Cost.TabIndex = 117;
+            this.Tier1Cost.TabIndex = 148;
             this.Tier1Cost.Text = "0.00";
             // 
             // label13
@@ -1532,10 +1260,10 @@ namespace D3.Commission
             this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(340, 3);
+            this.label13.Location = new System.Drawing.Point(448, 22);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(40, 17);
-            this.label13.TabIndex = 116;
+            this.label13.TabIndex = 147;
             this.label13.Text = "Cost";
             // 
             // Tier1Price
@@ -1543,10 +1271,10 @@ namespace D3.Commission
             this.Tier1Price.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Tier1Price.AutoSize = true;
             this.Tier1Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tier1Price.Location = new System.Drawing.Point(560, 3);
+            this.Tier1Price.Location = new System.Drawing.Point(644, 22);
             this.Tier1Price.Name = "Tier1Price";
             this.Tier1Price.Size = new System.Drawing.Size(40, 17);
-            this.Tier1Price.TabIndex = 115;
+            this.Tier1Price.TabIndex = 146;
             this.Tier1Price.Text = "0.00";
             // 
             // label15
@@ -1554,10 +1282,10 @@ namespace D3.Commission
             this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(509, 3);
+            this.label15.Location = new System.Drawing.Point(593, 22);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(45, 17);
-            this.label15.TabIndex = 114;
+            this.label15.TabIndex = 145;
             this.label15.Text = "Price";
             // 
             // Tier1Grid
@@ -1565,43 +1293,337 @@ namespace D3.Commission
             this.Tier1Grid.AllowUserToAddRows = false;
             this.Tier1Grid.AllowUserToDeleteRows = false;
             this.Tier1Grid.AllowUserToOrderColumns = true;
-            this.Tier1Grid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.Tier1Grid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Tier1Grid.BackgroundColor = System.Drawing.SystemColors.Control;
             this.Tier1Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Tier1Grid.GridColor = System.Drawing.SystemColors.Control;
-            this.Tier1Grid.Location = new System.Drawing.Point(3, 23);
+            this.Tier1Grid.Location = new System.Drawing.Point(6, 46);
             this.Tier1Grid.Name = "Tier1Grid";
-            this.Tier1Grid.Size = new System.Drawing.Size(972, 182);
-            this.Tier1Grid.TabIndex = 113;
+            this.Tier1Grid.Size = new System.Drawing.Size(1016, 615);
+            this.Tier1Grid.TabIndex = 144;
             // 
-            // tabPage5
+            // Tier2
             // 
-            this.tabPage5.Controls.Add(this.IncompleteAll);
-            this.tabPage5.Controls.Add(this.IncompleteCommission);
-            this.tabPage5.Controls.Add(this.label36);
-            this.tabPage5.Controls.Add(this.IncompleteProfit);
-            this.tabPage5.Controls.Add(this.label38);
-            this.tabPage5.Controls.Add(this.IncompleteCost);
-            this.tabPage5.Controls.Add(this.label40);
-            this.tabPage5.Controls.Add(this.IncompletePrice);
-            this.tabPage5.Controls.Add(this.label43);
-            this.tabPage5.Controls.Add(this.label44);
-            this.tabPage5.Controls.Add(this.IncompleteGrid);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(984, 664);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Training/Services Incomplete";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            this.Tier2.Controls.Add(this.Tier2All);
+            this.Tier2.Controls.Add(this.Tier2Commission);
+            this.Tier2.Controls.Add(this.label32);
+            this.Tier2.Controls.Add(this.label24);
+            this.Tier2.Controls.Add(this.Tier2Profit);
+            this.Tier2.Controls.Add(this.label14);
+            this.Tier2.Controls.Add(this.Tier2Cost);
+            this.Tier2.Controls.Add(this.label17);
+            this.Tier2.Controls.Add(this.Tier2Price);
+            this.Tier2.Controls.Add(this.label19);
+            this.Tier2.Controls.Add(this.Tier2Grid);
+            this.Tier2.Location = new System.Drawing.Point(4, 22);
+            this.Tier2.Name = "Tier2";
+            this.Tier2.Size = new System.Drawing.Size(1028, 664);
+            this.Tier2.TabIndex = 7;
+            this.Tier2.Text = "Tier2 Products";
+            this.Tier2.UseVisualStyleBackColor = true;
+            // 
+            // Tier2All
+            // 
+            this.Tier2All.AutoSize = true;
+            this.Tier2All.Checked = true;
+            this.Tier2All.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.Tier2All.Location = new System.Drawing.Point(23, 23);
+            this.Tier2All.Name = "Tier2All";
+            this.Tier2All.Size = new System.Drawing.Size(37, 17);
+            this.Tier2All.TabIndex = 155;
+            this.Tier2All.Text = "All";
+            this.Tier2All.UseVisualStyleBackColor = true;
+            // 
+            // Tier2Commission
+            // 
+            this.Tier2Commission.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Tier2Commission.AutoSize = true;
+            this.Tier2Commission.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tier2Commission.Location = new System.Drawing.Point(944, 22);
+            this.Tier2Commission.Name = "Tier2Commission";
+            this.Tier2Commission.Size = new System.Drawing.Size(40, 17);
+            this.Tier2Commission.TabIndex = 154;
+            this.Tier2Commission.Text = "0.00";
+            // 
+            // label32
+            // 
+            this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(900, 22);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(38, 17);
+            this.label32.TabIndex = 153;
+            this.label32.Text = "PBP";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(6, 3);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(51, 17);
+            this.label24.TabIndex = 152;
+            this.label24.Text = "Tier 2";
+            // 
+            // Tier2Profit
+            // 
+            this.Tier2Profit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Tier2Profit.AutoSize = true;
+            this.Tier2Profit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tier2Profit.Location = new System.Drawing.Point(794, 22);
+            this.Tier2Profit.Name = "Tier2Profit";
+            this.Tier2Profit.Size = new System.Drawing.Size(40, 17);
+            this.Tier2Profit.TabIndex = 151;
+            this.Tier2Profit.Text = "0.00";
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(741, 22);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(47, 17);
+            this.label14.TabIndex = 150;
+            this.label14.Text = "Profit";
+            // 
+            // Tier2Cost
+            // 
+            this.Tier2Cost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Tier2Cost.AutoSize = true;
+            this.Tier2Cost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tier2Cost.Location = new System.Drawing.Point(494, 22);
+            this.Tier2Cost.Name = "Tier2Cost";
+            this.Tier2Cost.Size = new System.Drawing.Size(40, 17);
+            this.Tier2Cost.TabIndex = 149;
+            this.Tier2Cost.Text = "0.00";
+            // 
+            // label17
+            // 
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(448, 22);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(40, 17);
+            this.label17.TabIndex = 148;
+            this.label17.Text = "Cost";
+            // 
+            // Tier2Price
+            // 
+            this.Tier2Price.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Tier2Price.AutoSize = true;
+            this.Tier2Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tier2Price.Location = new System.Drawing.Point(644, 22);
+            this.Tier2Price.Name = "Tier2Price";
+            this.Tier2Price.Size = new System.Drawing.Size(40, 17);
+            this.Tier2Price.TabIndex = 147;
+            this.Tier2Price.Text = "0.00";
+            // 
+            // label19
+            // 
+            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(593, 22);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(45, 17);
+            this.label19.TabIndex = 146;
+            this.label19.Text = "Price";
+            // 
+            // Tier2Grid
+            // 
+            this.Tier2Grid.AllowUserToAddRows = false;
+            this.Tier2Grid.AllowUserToDeleteRows = false;
+            this.Tier2Grid.AllowUserToOrderColumns = true;
+            this.Tier2Grid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Tier2Grid.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.Tier2Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Tier2Grid.GridColor = System.Drawing.SystemColors.Control;
+            this.Tier2Grid.Location = new System.Drawing.Point(6, 46);
+            this.Tier2Grid.Name = "Tier2Grid";
+            this.Tier2Grid.Size = new System.Drawing.Size(1016, 615);
+            this.Tier2Grid.TabIndex = 145;
+            // 
+            // SubRenewals
+            // 
+            this.SubRenewals.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SubRenewals.Controls.Add(this.RenewalAll);
+            this.SubRenewals.Controls.Add(this.RenewalCommission);
+            this.SubRenewals.Controls.Add(this.label33);
+            this.SubRenewals.Controls.Add(this.label26);
+            this.SubRenewals.Controls.Add(this.RenewalProfit);
+            this.SubRenewals.Controls.Add(this.label21);
+            this.SubRenewals.Controls.Add(this.RenewalCost);
+            this.SubRenewals.Controls.Add(this.label23);
+            this.SubRenewals.Controls.Add(this.RenewalPrice);
+            this.SubRenewals.Controls.Add(this.label25);
+            this.SubRenewals.Controls.Add(this.RenewalGrid);
+            this.SubRenewals.Location = new System.Drawing.Point(4, 22);
+            this.SubRenewals.Name = "SubRenewals";
+            this.SubRenewals.Size = new System.Drawing.Size(1028, 664);
+            this.SubRenewals.TabIndex = 8;
+            this.SubRenewals.Text = "Subscription Renewals";
+            this.SubRenewals.UseVisualStyleBackColor = true;
+            // 
+            // RenewalAll
+            // 
+            this.RenewalAll.AutoSize = true;
+            this.RenewalAll.Checked = true;
+            this.RenewalAll.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.RenewalAll.Location = new System.Drawing.Point(23, 23);
+            this.RenewalAll.Name = "RenewalAll";
+            this.RenewalAll.Size = new System.Drawing.Size(37, 17);
+            this.RenewalAll.TabIndex = 156;
+            this.RenewalAll.Text = "All";
+            this.RenewalAll.UseVisualStyleBackColor = true;
+            // 
+            // RenewalCommission
+            // 
+            this.RenewalCommission.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.RenewalCommission.AutoSize = true;
+            this.RenewalCommission.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RenewalCommission.Location = new System.Drawing.Point(944, 22);
+            this.RenewalCommission.Name = "RenewalCommission";
+            this.RenewalCommission.Size = new System.Drawing.Size(40, 17);
+            this.RenewalCommission.TabIndex = 155;
+            this.RenewalCommission.Text = "0.00";
+            // 
+            // label33
+            // 
+            this.label33.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(900, 22);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(38, 17);
+            this.label33.TabIndex = 154;
+            this.label33.Text = "PBP";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(6, 3);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(110, 17);
+            this.label26.TabIndex = 153;
+            this.label26.Text = "Sub Renewals";
+            // 
+            // RenewalProfit
+            // 
+            this.RenewalProfit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.RenewalProfit.AutoSize = true;
+            this.RenewalProfit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RenewalProfit.Location = new System.Drawing.Point(794, 22);
+            this.RenewalProfit.Name = "RenewalProfit";
+            this.RenewalProfit.Size = new System.Drawing.Size(40, 17);
+            this.RenewalProfit.TabIndex = 152;
+            this.RenewalProfit.Text = "0.00";
+            // 
+            // label21
+            // 
+            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(741, 22);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(47, 17);
+            this.label21.TabIndex = 151;
+            this.label21.Text = "Profit";
+            // 
+            // RenewalCost
+            // 
+            this.RenewalCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.RenewalCost.AutoSize = true;
+            this.RenewalCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RenewalCost.Location = new System.Drawing.Point(494, 22);
+            this.RenewalCost.Name = "RenewalCost";
+            this.RenewalCost.Size = new System.Drawing.Size(40, 17);
+            this.RenewalCost.TabIndex = 150;
+            this.RenewalCost.Text = "0.00";
+            // 
+            // label23
+            // 
+            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(448, 22);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(40, 17);
+            this.label23.TabIndex = 149;
+            this.label23.Text = "Cost";
+            // 
+            // RenewalPrice
+            // 
+            this.RenewalPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.RenewalPrice.AutoSize = true;
+            this.RenewalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RenewalPrice.Location = new System.Drawing.Point(644, 22);
+            this.RenewalPrice.Name = "RenewalPrice";
+            this.RenewalPrice.Size = new System.Drawing.Size(40, 17);
+            this.RenewalPrice.TabIndex = 148;
+            this.RenewalPrice.Text = "0.00";
+            // 
+            // label25
+            // 
+            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(593, 22);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(45, 17);
+            this.label25.TabIndex = 147;
+            this.label25.Text = "Price";
+            // 
+            // RenewalGrid
+            // 
+            this.RenewalGrid.AllowUserToAddRows = false;
+            this.RenewalGrid.AllowUserToDeleteRows = false;
+            this.RenewalGrid.AllowUserToOrderColumns = true;
+            this.RenewalGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RenewalGrid.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.RenewalGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RenewalGrid.GridColor = System.Drawing.SystemColors.Control;
+            this.RenewalGrid.Location = new System.Drawing.Point(6, 46);
+            this.RenewalGrid.Name = "RenewalGrid";
+            this.RenewalGrid.Size = new System.Drawing.Size(1016, 613);
+            this.RenewalGrid.TabIndex = 146;
+            // 
+            // Incomplete
+            // 
+            this.Incomplete.Controls.Add(this.IncompleteAll);
+            this.Incomplete.Controls.Add(this.IncompleteCommission);
+            this.Incomplete.Controls.Add(this.label36);
+            this.Incomplete.Controls.Add(this.IncompleteProfit);
+            this.Incomplete.Controls.Add(this.label38);
+            this.Incomplete.Controls.Add(this.IncompleteCost);
+            this.Incomplete.Controls.Add(this.label40);
+            this.Incomplete.Controls.Add(this.IncompletePrice);
+            this.Incomplete.Controls.Add(this.label43);
+            this.Incomplete.Controls.Add(this.label44);
+            this.Incomplete.Controls.Add(this.IncompleteGrid);
+            this.Incomplete.Location = new System.Drawing.Point(4, 22);
+            this.Incomplete.Name = "Incomplete";
+            this.Incomplete.Padding = new System.Windows.Forms.Padding(3);
+            this.Incomplete.Size = new System.Drawing.Size(1028, 664);
+            this.Incomplete.TabIndex = 4;
+            this.Incomplete.Text = "Training/Services Incomplete";
+            this.Incomplete.UseVisualStyleBackColor = true;
             // 
             // IncompleteAll
             // 
             this.IncompleteAll.AutoSize = true;
             this.IncompleteAll.Checked = true;
             this.IncompleteAll.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.IncompleteAll.Location = new System.Drawing.Point(9, 43);
+            this.IncompleteAll.Location = new System.Drawing.Point(23, 23);
             this.IncompleteAll.Name = "IncompleteAll";
             this.IncompleteAll.Size = new System.Drawing.Size(37, 17);
             this.IncompleteAll.TabIndex = 118;
@@ -1614,7 +1636,7 @@ namespace D3.Commission
             this.IncompleteCommission.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.IncompleteCommission.AutoSize = true;
             this.IncompleteCommission.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IncompleteCommission.Location = new System.Drawing.Point(911, 38);
+            this.IncompleteCommission.Location = new System.Drawing.Point(944, 22);
             this.IncompleteCommission.Name = "IncompleteCommission";
             this.IncompleteCommission.Size = new System.Drawing.Size(40, 17);
             this.IncompleteCommission.TabIndex = 117;
@@ -1625,7 +1647,7 @@ namespace D3.Commission
             this.label36.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(812, 38);
+            this.label36.Location = new System.Drawing.Point(900, 22);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(38, 17);
             this.label36.TabIndex = 116;
@@ -1636,7 +1658,7 @@ namespace D3.Commission
             this.IncompleteProfit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.IncompleteProfit.AutoSize = true;
             this.IncompleteProfit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IncompleteProfit.Location = new System.Drawing.Point(728, 38);
+            this.IncompleteProfit.Location = new System.Drawing.Point(794, 22);
             this.IncompleteProfit.Name = "IncompleteProfit";
             this.IncompleteProfit.Size = new System.Drawing.Size(40, 17);
             this.IncompleteProfit.TabIndex = 115;
@@ -1647,7 +1669,7 @@ namespace D3.Commission
             this.label38.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(675, 38);
+            this.label38.Location = new System.Drawing.Point(741, 22);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(47, 17);
             this.label38.TabIndex = 114;
@@ -1658,7 +1680,7 @@ namespace D3.Commission
             this.IncompleteCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.IncompleteCost.AutoSize = true;
             this.IncompleteCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IncompleteCost.Location = new System.Drawing.Point(403, 38);
+            this.IncompleteCost.Location = new System.Drawing.Point(494, 22);
             this.IncompleteCost.Name = "IncompleteCost";
             this.IncompleteCost.Size = new System.Drawing.Size(40, 17);
             this.IncompleteCost.TabIndex = 113;
@@ -1669,7 +1691,7 @@ namespace D3.Commission
             this.label40.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(357, 38);
+            this.label40.Location = new System.Drawing.Point(448, 22);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(40, 17);
             this.label40.TabIndex = 112;
@@ -1680,7 +1702,7 @@ namespace D3.Commission
             this.IncompletePrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.IncompletePrice.AutoSize = true;
             this.IncompletePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IncompletePrice.Location = new System.Drawing.Point(577, 38);
+            this.IncompletePrice.Location = new System.Drawing.Point(644, 22);
             this.IncompletePrice.Name = "IncompletePrice";
             this.IncompletePrice.Size = new System.Drawing.Size(40, 17);
             this.IncompletePrice.TabIndex = 111;
@@ -1691,7 +1713,7 @@ namespace D3.Commission
             this.label43.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(526, 38);
+            this.label43.Location = new System.Drawing.Point(593, 22);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(45, 17);
             this.label43.TabIndex = 110;
@@ -1701,7 +1723,7 @@ namespace D3.Commission
             // 
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(6, 14);
+            this.label44.Location = new System.Drawing.Point(6, 3);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(218, 17);
             this.label44.TabIndex = 109;
@@ -1718,38 +1740,38 @@ namespace D3.Commission
             this.IncompleteGrid.BackgroundColor = System.Drawing.SystemColors.Control;
             this.IncompleteGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.IncompleteGrid.GridColor = System.Drawing.SystemColors.Control;
-            this.IncompleteGrid.Location = new System.Drawing.Point(6, 66);
+            this.IncompleteGrid.Location = new System.Drawing.Point(6, 46);
             this.IncompleteGrid.Name = "IncompleteGrid";
-            this.IncompleteGrid.Size = new System.Drawing.Size(972, 584);
+            this.IncompleteGrid.Size = new System.Drawing.Size(1016, 612);
             this.IncompleteGrid.TabIndex = 108;
             // 
-            // tabPage6
+            // Prior
             // 
-            this.tabPage6.Controls.Add(this.PriorAll);
-            this.tabPage6.Controls.Add(this.PriorCommission);
-            this.tabPage6.Controls.Add(this.label47);
-            this.tabPage6.Controls.Add(this.PriorDifference);
-            this.tabPage6.Controls.Add(this.label50);
-            this.tabPage6.Controls.Add(this.PriorEstimatedCost);
-            this.tabPage6.Controls.Add(this.label53);
-            this.tabPage6.Controls.Add(this.PriorActualCost);
-            this.tabPage6.Controls.Add(this.label56);
-            this.tabPage6.Controls.Add(this.label58);
-            this.tabPage6.Controls.Add(this.PriorGrid);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(984, 664);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Training/Services Prior";
-            this.tabPage6.UseVisualStyleBackColor = true;
+            this.Prior.Controls.Add(this.PriorAll);
+            this.Prior.Controls.Add(this.PriorCommission);
+            this.Prior.Controls.Add(this.label47);
+            this.Prior.Controls.Add(this.PriorDifference);
+            this.Prior.Controls.Add(this.label50);
+            this.Prior.Controls.Add(this.PriorEstimatedCost);
+            this.Prior.Controls.Add(this.label53);
+            this.Prior.Controls.Add(this.PriorActualCost);
+            this.Prior.Controls.Add(this.label56);
+            this.Prior.Controls.Add(this.label58);
+            this.Prior.Controls.Add(this.PriorGrid);
+            this.Prior.Location = new System.Drawing.Point(4, 22);
+            this.Prior.Name = "Prior";
+            this.Prior.Padding = new System.Windows.Forms.Padding(3);
+            this.Prior.Size = new System.Drawing.Size(1028, 664);
+            this.Prior.TabIndex = 5;
+            this.Prior.Text = "Training/Services Prior";
+            this.Prior.UseVisualStyleBackColor = true;
             // 
             // PriorAll
             // 
             this.PriorAll.AutoSize = true;
             this.PriorAll.Checked = true;
             this.PriorAll.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.PriorAll.Location = new System.Drawing.Point(9, 39);
+            this.PriorAll.Location = new System.Drawing.Point(23, 23);
             this.PriorAll.Name = "PriorAll";
             this.PriorAll.Size = new System.Drawing.Size(37, 17);
             this.PriorAll.TabIndex = 128;
@@ -1762,7 +1784,7 @@ namespace D3.Commission
             this.PriorCommission.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PriorCommission.AutoSize = true;
             this.PriorCommission.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PriorCommission.Location = new System.Drawing.Point(911, 38);
+            this.PriorCommission.Location = new System.Drawing.Point(964, 22);
             this.PriorCommission.Name = "PriorCommission";
             this.PriorCommission.Size = new System.Drawing.Size(40, 17);
             this.PriorCommission.TabIndex = 127;
@@ -1773,7 +1795,7 @@ namespace D3.Commission
             this.label47.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.Location = new System.Drawing.Point(812, 38);
+            this.label47.Location = new System.Drawing.Point(920, 22);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(38, 17);
             this.label47.TabIndex = 126;
@@ -1784,7 +1806,7 @@ namespace D3.Commission
             this.PriorDifference.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PriorDifference.AutoSize = true;
             this.PriorDifference.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PriorDifference.Location = new System.Drawing.Point(728, 38);
+            this.PriorDifference.Location = new System.Drawing.Point(814, 22);
             this.PriorDifference.Name = "PriorDifference";
             this.PriorDifference.Size = new System.Drawing.Size(40, 17);
             this.PriorDifference.TabIndex = 125;
@@ -1795,7 +1817,7 @@ namespace D3.Commission
             this.label50.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.Location = new System.Drawing.Point(639, 38);
+            this.label50.Location = new System.Drawing.Point(725, 22);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(83, 17);
             this.label50.TabIndex = 124;
@@ -1806,7 +1828,7 @@ namespace D3.Commission
             this.PriorEstimatedCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PriorEstimatedCost.AutoSize = true;
             this.PriorEstimatedCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PriorEstimatedCost.Location = new System.Drawing.Point(363, 38);
+            this.PriorEstimatedCost.Location = new System.Drawing.Point(493, 21);
             this.PriorEstimatedCost.Name = "PriorEstimatedCost";
             this.PriorEstimatedCost.Size = new System.Drawing.Size(40, 17);
             this.PriorEstimatedCost.TabIndex = 123;
@@ -1817,7 +1839,7 @@ namespace D3.Commission
             this.label53.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.Location = new System.Drawing.Point(229, 38);
+            this.label53.Location = new System.Drawing.Point(371, 22);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(116, 17);
             this.label53.TabIndex = 122;
@@ -1828,7 +1850,7 @@ namespace D3.Commission
             this.PriorActualCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PriorActualCost.AutoSize = true;
             this.PriorActualCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PriorActualCost.Location = new System.Drawing.Point(555, 38);
+            this.PriorActualCost.Location = new System.Drawing.Point(664, 22);
             this.PriorActualCost.Name = "PriorActualCost";
             this.PriorActualCost.Size = new System.Drawing.Size(40, 17);
             this.PriorActualCost.TabIndex = 121;
@@ -1839,7 +1861,7 @@ namespace D3.Commission
             this.label56.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label56.AutoSize = true;
             this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label56.Location = new System.Drawing.Point(447, 38);
+            this.label56.Location = new System.Drawing.Point(568, 22);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(90, 17);
             this.label56.TabIndex = 120;
@@ -1849,7 +1871,7 @@ namespace D3.Commission
             // 
             this.label58.AutoSize = true;
             this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.Location = new System.Drawing.Point(6, 14);
+            this.label58.Location = new System.Drawing.Point(6, 3);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(175, 17);
             this.label58.TabIndex = 119;
@@ -1866,9 +1888,9 @@ namespace D3.Commission
             this.PriorGrid.BackgroundColor = System.Drawing.SystemColors.Control;
             this.PriorGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PriorGrid.GridColor = System.Drawing.SystemColors.Control;
-            this.PriorGrid.Location = new System.Drawing.Point(6, 66);
+            this.PriorGrid.Location = new System.Drawing.Point(6, 46);
             this.PriorGrid.Name = "PriorGrid";
-            this.PriorGrid.Size = new System.Drawing.Size(972, 584);
+            this.PriorGrid.Size = new System.Drawing.Size(1016, 615);
             this.PriorGrid.TabIndex = 118;
             // 
             // label16
@@ -1897,7 +1919,7 @@ namespace D3.Commission
             this.fToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1016, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1060, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1945,7 +1967,7 @@ namespace D3.Commission
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1016, 741);
+            this.ClientSize = new System.Drawing.Size(1060, 741);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1955,29 +1977,33 @@ namespace D3.Commission
             this.Text = "Performance Based Pay Control";
             this.Load += new System.EventHandler(this.CommissionControl_Load);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.Control.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.Training.ResumeLayout(false);
+            this.Training.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TrainingGrid)).EndInit();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
+            this.Projects.ResumeLayout(false);
+            this.Projects.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProjectGrid)).EndInit();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RenewalGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Tier2Grid)).EndInit();
+            this.Tier1.ResumeLayout(false);
+            this.Tier1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Tier1Grid)).EndInit();
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
+            this.Tier2.ResumeLayout(false);
+            this.Tier2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Tier2Grid)).EndInit();
+            this.SubRenewals.ResumeLayout(false);
+            this.SubRenewals.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RenewalGrid)).EndInit();
+            this.Incomplete.ResumeLayout(false);
+            this.Incomplete.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IncompleteGrid)).EndInit();
-            this.tabPage6.ResumeLayout(false);
-            this.tabPage6.PerformLayout();
+            this.Prior.ResumeLayout(false);
+            this.Prior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PriorGrid)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -1989,18 +2015,9 @@ namespace D3.Commission
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label Tier1Profit;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label Tier1Cost;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label Tier1Price;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.DataGridView Tier1Grid;
+        private System.Windows.Forms.TabPage Control;
+        private System.Windows.Forms.TabPage Training;
+        private System.Windows.Forms.TabPage Projects;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label ProjectProfit;
         private System.Windows.Forms.Label label5;
@@ -2025,22 +2042,8 @@ namespace D3.Commission
         private System.Windows.Forms.ComboBox SalesPerson;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label RenewalProfit;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label RenewalCost;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label RenewalPrice;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.DataGridView RenewalGrid;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label Tier2Price;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.DataGridView Tier2Grid;
-        private System.Windows.Forms.Label Tier2Profit;
-        private System.Windows.Forms.Label Tier2Cost;
         private System.Windows.Forms.TextBox sTotalProfit;
         private System.Windows.Forms.TextBox sRenewalProfit;
         private System.Windows.Forms.TextBox sRenewalPrice;
@@ -2067,8 +2070,6 @@ namespace D3.Commission
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.TextBox sTotalCommission;
         private System.Windows.Forms.TextBox sRenewalCommission;
@@ -2080,12 +2081,6 @@ namespace D3.Commission
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label ProjectCommission;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label RenewalCommission;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label Tier2Commission;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label Tier1Commission;
-        private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.DateTimePicker PayDate;
         private System.Windows.Forms.Label label34;
@@ -2096,7 +2091,7 @@ namespace D3.Commission
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configToolStripMenuItem;
-        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage Incomplete;
         private System.Windows.Forms.Label IncompleteCommission;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label IncompleteProfit;
@@ -2107,7 +2102,7 @@ namespace D3.Commission
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.DataGridView IncompleteGrid;
-        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage Prior;
         private System.Windows.Forms.Label PriorCommission;
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.Label PriorDifference;
@@ -2131,9 +2126,6 @@ namespace D3.Commission
         private System.Windows.Forms.Button ExportReport;
         private System.Windows.Forms.CheckBox TrainingAll;
         private System.Windows.Forms.CheckBox ProjectAll;
-        private System.Windows.Forms.CheckBox RenewalAll;
-        private System.Windows.Forms.CheckBox Tier2All;
-        private System.Windows.Forms.CheckBox Tier1All;
         private System.Windows.Forms.CheckBox IncompleteAll;
         private System.Windows.Forms.CheckBox PriorAll;
         private System.Windows.Forms.Label label52;
@@ -2143,6 +2135,42 @@ namespace D3.Commission
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TabPage Tier1;
+        private System.Windows.Forms.CheckBox Tier1All;
+        private System.Windows.Forms.Label Tier1Commission;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label Tier1Profit;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label Tier1Cost;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label Tier1Price;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.DataGridView Tier1Grid;
+        private System.Windows.Forms.TabPage Tier2;
+        private System.Windows.Forms.CheckBox Tier2All;
+        private System.Windows.Forms.Label Tier2Commission;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label Tier2Profit;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label Tier2Cost;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label Tier2Price;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.DataGridView Tier2Grid;
+        private System.Windows.Forms.TabPage SubRenewals;
+        private System.Windows.Forms.CheckBox RenewalAll;
+        private System.Windows.Forms.Label RenewalCommission;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label RenewalProfit;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label RenewalCost;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label RenewalPrice;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.DataGridView RenewalGrid;
 
 
 

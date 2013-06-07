@@ -25,13 +25,26 @@ SET NOCOUNT ON
 DECLARE @StartDate DATETIME
 SET @StartDate = '5/1/2009'
 
-SELECT Type, ID, SalesPersonName, datefulfilled, ProjectName, OpportunityName,  AccountName, ContactName, ProductName, ExtendedCost, ExtendedPrice 
+SELECT 
+	Type, 
+	ID, 
+	SalesPersonName, 
+	datefulfilled, 
+	ProjectName, 
+	OpportunityName,  
+	AccountName, 
+	ContactName, 
+	ProductName, 
+	ExtendedCost, 
+	ExtendedPrice
 FROM dbo.Projects WITH (NOLOCK)
 WHERE CommissionDate IS NULL 
 	AND datefulfilled IS NOT NULL 
 	AND SalesPersonName = @SalesPersonName 
 	AND datefulfilled >= @StartDate
 	AND datefulfilled <= @EndDate 
+	AND ExtendedCost <> 0
+	AND d3_projecttype <> 6
 ORDER BY ProjectName, ProductName, ExtendedCost
 
 GO

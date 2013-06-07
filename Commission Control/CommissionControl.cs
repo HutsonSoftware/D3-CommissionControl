@@ -488,6 +488,7 @@ namespace D3.Commission
             dt.Columns.Add("Account Name", typeof(string));
             dt.Columns.Add("Contact Name", typeof(string));
             dt.Columns.Add("Product Name", typeof(string));
+            dt.Columns.Add("Quantity", typeof(string));
             dt.Columns.Add("Cost", typeof(string));
             dt.Columns.Add("Price", typeof(string));
             dt.Columns.Add("Pay Rate", typeof(string));
@@ -515,6 +516,7 @@ namespace D3.Commission
                         row.Cells["AccountName"].Value.ToString().Replace(",", " "),
                         row.Cells["ContactName"].Value.ToString().Replace(",", " "),
                         row.Cells["ProductName"].Value.ToString().Replace(",", " "),
+                        row.Cells["Quantity"].Value.ToString(),
                         row.Cells["ExtendedCost"].Value.ToString().Replace("$", ""),
                         row.Cells["ExtendedPrice"].Value.ToString().Replace("$", ""),
                         row.Cells["CommissionPercent"].Value.ToString(),
@@ -536,6 +538,7 @@ namespace D3.Commission
             dt.Columns.Add("Account Name", typeof(string));
             dt.Columns.Add("Contact Name", typeof(string));
             dt.Columns.Add("Product Name", typeof(string));
+            dt.Columns.Add("Quantity", typeof(string));
             dt.Columns.Add("Cost", typeof(string));
             dt.Columns.Add("Price", typeof(string));
             dt.Columns.Add("Pay Rate", typeof(string));
@@ -564,6 +567,7 @@ namespace D3.Commission
                         row.Cells["AccountName"].Value.ToString().Replace(",", " "),
                         row.Cells["ContactName"].Value.ToString().Replace(",", " "),
                         row.Cells["ProductName"].Value.ToString().Replace(",", " "),
+                        row.Cells["Quantity"].Value.ToString(),
                         row.Cells["ExtendedCost"].Value.ToString().Replace("$", ""),
                         row.Cells["ExtendedPrice"].Value.ToString().Replace("$", ""),
                         row.Cells["CommissionPercent"].Value.ToString(),
@@ -585,6 +589,7 @@ namespace D3.Commission
             dt.Columns.Add("Account Name", typeof(string));
             dt.Columns.Add("Contact Name", typeof(string));
             dt.Columns.Add("Product Name", typeof(string));
+            dt.Columns.Add("Quantity", typeof(string));
             dt.Columns.Add("Cost", typeof(string));
             dt.Columns.Add("Price", typeof(string));
             dt.Columns.Add("Pay Rate", typeof(string));
@@ -612,6 +617,7 @@ namespace D3.Commission
                         row.Cells["AccountName"].Value.ToString().Replace(",", " "),
                         row.Cells["ContactName"].Value.ToString().Replace(",", " "),
                         row.Cells["ProductName"].Value.ToString().Replace(",", " "),
+                        row.Cells["Quantity"].Value.ToString(),
                         row.Cells["ExtendedCost"].Value.ToString().Replace("$", ""),
                         row.Cells["ExtendedPrice"].Value.ToString().Replace("$", ""),
                         row.Cells["CommissionPercent"].Value.ToString(),
@@ -2128,6 +2134,10 @@ namespace D3.Commission
             Tier1Grid.Columns["ContactName"].Width = 100;
             Tier1Grid.Columns.Add("ProductName", "Product Name");
             Tier1Grid.Columns["ProductName"].Width = 145;
+            Tier1Grid.Columns.Add("Opportunity", "Opportunity");
+            Tier1Grid.Columns["Opportunity"].Width = 65;
+            Tier1Grid.Columns.Add("Quantity", "Quantity");
+            Tier1Grid.Columns["Quantity"].Width = 65;
             Tier1Grid.Columns.Add("ExtendedCost", "Extended Cost");
             Tier1Grid.Columns["ExtendedCost"].Width = 65;
             Tier1Grid.Columns.Add("ExtendedPrice", "Extended Price");
@@ -2336,6 +2346,8 @@ namespace D3.Commission
             Tier2Grid.Columns["ContactName"].Width = 100;
             Tier2Grid.Columns.Add("ProductName", "Product Name");
             Tier2Grid.Columns["ProductName"].Width = 145;
+            Tier2Grid.Columns.Add("Quantity", "Quantity");
+            Tier2Grid.Columns["Quantity"].Width = 65;
             Tier2Grid.Columns.Add("ExtendedCost", "Extended Cost");
             Tier2Grid.Columns["ExtendedCost"].Width = 65;
             Tier2Grid.Columns.Add("ExtendedPrice", "Extended Price");
@@ -2518,6 +2530,8 @@ namespace D3.Commission
             RenewalGrid.Columns["Contactname"].Width = 100;
             RenewalGrid.Columns.Add("ProductName", "Product Name");
             RenewalGrid.Columns["Productname"].Width = 145;
+            RenewalGrid.Columns.Add("Quantity", "Quantity");
+            RenewalGrid.Columns["Quantity"].Width = 65;
             RenewalGrid.Columns.Add("ExtendedCost", "Extended Cost");
             RenewalGrid.Columns["ExtendedCost"].Width = 65;
             RenewalGrid.Columns.Add("ExtendedPrice", "Extended Price");

@@ -13,6 +13,7 @@ GO
 			@EndDate = '12/31/2013'
 			
 	History:	2013/01/14 - Created.
+				2013/06/05 - Added Quantity
 			
 */
 
@@ -47,7 +48,8 @@ FROM
 		o.customeridname ContactName, 
 		id.productidname ProductName, 
 		NULL ExtendedCost, 
-		id.priceperunit * id.quantity - id.manualdiscountamount ExtendedPrice 
+		id.priceperunit * id.quantity - id.manualdiscountamount ExtendedPrice,
+		id.quantity 
 	FROM dbo.FilteredInvoice i WITH (NOLOCK)
 	INNER JOIN dbo.FilteredInvoiceDetail id WITH (NOLOCK) ON i.invoiceid = id.invoiceid 
 	INNER JOIN dbo.FilteredProduct p WITH (NOLOCK) ON id.productid = p.productid
@@ -72,7 +74,8 @@ FROM
 		o.customeridname ContactName, 
 		sod.productidname ProductName, 
 		(sod.d3_finalcost * sod.quantity) * (1 - sod.d3_autodeskdiscount / 100) ExtendedCost, 
-		NULL ExtendedPrice 
+		NULL ExtendedPrice,
+		sod.quantity 
 	FROM dbo.FilteredSalesOrderDetail sod WITH (NOLOCK) 
 	INNER JOIN dbo.FilteredSalesOrder so WITH (NOLOCK) ON sod.salesorderid = so.salesorderid 
 	INNER JOIN dbo.FilteredProduct p WITH (NOLOCK) ON sod.productid = p.productid 
