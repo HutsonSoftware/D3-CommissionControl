@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TrainingSet" targetNamespace="http://tempuri.org/TrainingSet.xsd" xmlns:mstns="http://tempuri.org/TrainingSet.xsd" xmlns="http://tempuri.org/TrainingSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="D3Server3ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="D3Server3ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.D3.Commission.Properties.Settings.GlobalReference.Default.D3Server3ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TrainingTableAdapter" GeneratorDataComponentClassName="TrainingTableAdapter" Name="Training" UserDataComponentName="TrainingTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="D3Server3ConnectionString (Settings)" DbObjectName="D3_TECHNOLOGIES_MSCRM.dbo.Training" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT TotalCost, CostPerAttendee, D3PoNumber, Date, EventCourse, EventName, Instructor, Location, Presenter, EventType, EventState, EventStateCodeName, OrderStateCode, OrderStateCodeName, AttendeeName, AttendeeInvoiceDetailName, InvoiceName, AccountID, AccountName, ContactID, ContactName, AttendeePrice, OpportunityName, EventDate, AttendeeStateCode, AttendeeStateCodeName, ordernumber, OpportunityStatecode, OpportunityStateCodeName, attendeeinvoicedetailstatecodename, invoicestatecode, invoicestatecodename, SalesPerson, NumberAttended, AttendeeState, AttendeeStateName, CommissionPaid, CommissionPercent FROM dbo.Training</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TotalCost" DataSetColumn="TotalCost" />
+              <Mapping SourceColumn="CostPerAttendee" DataSetColumn="CostPerAttendee" />
+              <Mapping SourceColumn="D3PoNumber" DataSetColumn="D3PoNumber" />
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
+              <Mapping SourceColumn="EventCourse" DataSetColumn="EventCourse" />
+              <Mapping SourceColumn="EventName" DataSetColumn="EventName" />
+              <Mapping SourceColumn="Instructor" DataSetColumn="Instructor" />
+              <Mapping SourceColumn="Location" DataSetColumn="Location" />
+              <Mapping SourceColumn="Presenter" DataSetColumn="Presenter" />
+              <Mapping SourceColumn="EventType" DataSetColumn="EventType" />
+              <Mapping SourceColumn="EventState" DataSetColumn="EventState" />
+              <Mapping SourceColumn="EventStateCodeName" DataSetColumn="EventStateCodeName" />
+              <Mapping SourceColumn="OrderStateCode" DataSetColumn="OrderStateCode" />
+              <Mapping SourceColumn="OrderStateCodeName" DataSetColumn="OrderStateCodeName" />
+              <Mapping SourceColumn="AttendeeName" DataSetColumn="AttendeeName" />
+              <Mapping SourceColumn="AttendeeInvoiceDetailName" DataSetColumn="AttendeeInvoiceDetailName" />
+              <Mapping SourceColumn="InvoiceName" DataSetColumn="InvoiceName" />
+              <Mapping SourceColumn="AccountID" DataSetColumn="AccountID" />
+              <Mapping SourceColumn="AccountName" DataSetColumn="AccountName" />
+              <Mapping SourceColumn="ContactID" DataSetColumn="ContactID" />
+              <Mapping SourceColumn="ContactName" DataSetColumn="ContactName" />
+              <Mapping SourceColumn="AttendeePrice" DataSetColumn="AttendeePrice" />
+              <Mapping SourceColumn="OpportunityName" DataSetColumn="OpportunityName" />
+              <Mapping SourceColumn="EventDate" DataSetColumn="EventDate" />
+              <Mapping SourceColumn="AttendeeStateCode" DataSetColumn="AttendeeStateCode" />
+              <Mapping SourceColumn="AttendeeStateCodeName" DataSetColumn="AttendeeStateCodeName" />
+              <Mapping SourceColumn="ordernumber" DataSetColumn="ordernumber" />
+              <Mapping SourceColumn="OpportunityStatecode" DataSetColumn="OpportunityStatecode" />
+              <Mapping SourceColumn="OpportunityStateCodeName" DataSetColumn="OpportunityStateCodeName" />
+              <Mapping SourceColumn="attendeeinvoicedetailstatecodename" DataSetColumn="attendeeinvoicedetailstatecodename" />
+              <Mapping SourceColumn="invoicestatecode" DataSetColumn="invoicestatecode" />
+              <Mapping SourceColumn="invoicestatecodename" DataSetColumn="invoicestatecodename" />
+              <Mapping SourceColumn="SalesPerson" DataSetColumn="SalesPerson" />
+              <Mapping SourceColumn="NumberAttended" DataSetColumn="NumberAttended" />
+              <Mapping SourceColumn="AttendeeState" DataSetColumn="AttendeeState" />
+              <Mapping SourceColumn="AttendeeStateName" DataSetColumn="AttendeeStateName" />
+              <Mapping SourceColumn="CommissionPaid" DataSetColumn="CommissionPaid" />
+              <Mapping SourceColumn="CommissionPercent" DataSetColumn="CommissionPercent" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TrainingSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="TrainingSet" msprop:Generator_UserDSName="TrainingSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Training" msprop:Generator_TableClassName="TrainingDataTable" msprop:Generator_RowEvArgName="TrainingRowChangeEvent" msprop:Generator_TableVarName="tableTraining" msprop:Generator_TablePropName="Training" msprop:Generator_RowDeletingName="TrainingRowDeleting" msprop:Generator_UserTableName="Training" msprop:Generator_RowChangingName="TrainingRowChanging" msprop:Generator_RowDeletedName="TrainingRowDeleted" msprop:Generator_RowChangedName="TrainingRowChanged" msprop:Generator_RowEvHandlerName="TrainingRowChangeEventHandler" msprop:Generator_RowClassName="TrainingRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TotalCost" msprop:Generator_ColumnVarNameInTable="columnTotalCost" msprop:Generator_ColumnPropNameInRow="TotalCost" msprop:Generator_ColumnPropNameInTable="TotalCostColumn" msprop:Generator_UserColumnName="TotalCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CostPerAttendee" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCostPerAttendee" msprop:Generator_ColumnPropNameInRow="CostPerAttendee" msprop:Generator_ColumnPropNameInTable="CostPerAttendeeColumn" msprop:Generator_UserColumnName="CostPerAttendee" type="xs:decimal" minOccurs="0" />
+              <xs:element name="D3PoNumber" msprop:Generator_ColumnVarNameInTable="columnD3PoNumber" msprop:Generator_ColumnPropNameInRow="D3PoNumber" msprop:Generator_ColumnPropNameInTable="D3PoNumberColumn" msprop:Generator_UserColumnName="D3PoNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Date" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EventCourse" msprop:Generator_ColumnVarNameInTable="columnEventCourse" msprop:Generator_ColumnPropNameInRow="EventCourse" msprop:Generator_ColumnPropNameInTable="EventCourseColumn" msprop:Generator_UserColumnName="EventCourse" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EventName" msprop:Generator_ColumnVarNameInTable="columnEventName" msprop:Generator_ColumnPropNameInRow="EventName" msprop:Generator_ColumnPropNameInTable="EventNameColumn" msprop:Generator_UserColumnName="EventName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Instructor" msprop:Generator_ColumnVarNameInTable="columnInstructor" msprop:Generator_ColumnPropNameInRow="Instructor" msprop:Generator_ColumnPropNameInTable="InstructorColumn" msprop:Generator_UserColumnName="Instructor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Location" msprop:Generator_ColumnVarNameInTable="columnLocation" msprop:Generator_ColumnPropNameInRow="Location" msprop:Generator_ColumnPropNameInTable="LocationColumn" msprop:Generator_UserColumnName="Location" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Presenter" msprop:Generator_ColumnVarNameInTable="columnPresenter" msprop:Generator_ColumnPropNameInRow="Presenter" msprop:Generator_ColumnPropNameInTable="PresenterColumn" msprop:Generator_UserColumnName="Presenter" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="160" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EventType" msprop:Generator_ColumnVarNameInTable="columnEventType" msprop:Generator_ColumnPropNameInRow="EventType" msprop:Generator_ColumnPropNameInTable="EventTypeColumn" msprop:Generator_UserColumnName="EventType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EventState" msprop:Generator_ColumnVarNameInTable="columnEventState" msprop:Generator_ColumnPropNameInRow="EventState" msprop:Generator_ColumnPropNameInTable="EventStateColumn" msprop:Generator_UserColumnName="EventState" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EventStateCodeName" msprop:Generator_ColumnVarNameInTable="columnEventStateCodeName" msprop:Generator_ColumnPropNameInRow="EventStateCodeName" msprop:Generator_ColumnPropNameInTable="EventStateCodeNameColumn" msprop:Generator_UserColumnName="EventStateCodeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrderStateCode" msprop:Generator_ColumnVarNameInTable="columnOrderStateCode" msprop:Generator_ColumnPropNameInRow="OrderStateCode" msprop:Generator_ColumnPropNameInTable="OrderStateCodeColumn" msprop:Generator_UserColumnName="OrderStateCode" type="xs:int" />
+              <xs:element name="OrderStateCodeName" msprop:Generator_ColumnVarNameInTable="columnOrderStateCodeName" msprop:Generator_ColumnPropNameInRow="OrderStateCodeName" msprop:Generator_ColumnPropNameInTable="OrderStateCodeNameColumn" msprop:Generator_UserColumnName="OrderStateCodeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttendeeName" msprop:Generator_ColumnVarNameInTable="columnAttendeeName" msprop:Generator_ColumnPropNameInRow="AttendeeName" msprop:Generator_ColumnPropNameInTable="AttendeeNameColumn" msprop:Generator_UserColumnName="AttendeeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttendeeInvoiceDetailName" msprop:Generator_ColumnVarNameInTable="columnAttendeeInvoiceDetailName" msprop:Generator_ColumnPropNameInRow="AttendeeInvoiceDetailName" msprop:Generator_ColumnPropNameInTable="AttendeeInvoiceDetailNameColumn" msprop:Generator_UserColumnName="AttendeeInvoiceDetailName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvoiceName" msprop:Generator_ColumnVarNameInTable="columnInvoiceName" msprop:Generator_ColumnPropNameInRow="InvoiceName" msprop:Generator_ColumnPropNameInTable="InvoiceNameColumn" msprop:Generator_UserColumnName="InvoiceName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AccountID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnAccountID" msprop:Generator_ColumnPropNameInRow="AccountID" msprop:Generator_ColumnPropNameInTable="AccountIDColumn" msprop:Generator_UserColumnName="AccountID" type="xs:string" minOccurs="0" />
+              <xs:element name="AccountName" msprop:Generator_ColumnVarNameInTable="columnAccountName" msprop:Generator_ColumnPropNameInRow="AccountName" msprop:Generator_ColumnPropNameInTable="AccountNameColumn" msprop:Generator_UserColumnName="AccountName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="160" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ContactID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnContactID" msprop:Generator_ColumnPropNameInRow="ContactID" msprop:Generator_ColumnPropNameInTable="ContactIDColumn" msprop:Generator_UserColumnName="ContactID" type="xs:string" minOccurs="0" />
+              <xs:element name="ContactName" msprop:Generator_ColumnVarNameInTable="columnContactName" msprop:Generator_ColumnPropNameInRow="ContactName" msprop:Generator_ColumnPropNameInTable="ContactNameColumn" msprop:Generator_UserColumnName="ContactName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="160" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttendeePrice" msprop:Generator_ColumnVarNameInTable="columnAttendeePrice" msprop:Generator_ColumnPropNameInRow="AttendeePrice" msprop:Generator_ColumnPropNameInTable="AttendeePriceColumn" msprop:Generator_UserColumnName="AttendeePrice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OpportunityName" msprop:Generator_ColumnVarNameInTable="columnOpportunityName" msprop:Generator_ColumnPropNameInRow="OpportunityName" msprop:Generator_ColumnPropNameInTable="OpportunityNameColumn" msprop:Generator_UserColumnName="OpportunityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EventDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEventDate" msprop:Generator_ColumnPropNameInRow="EventDate" msprop:Generator_ColumnPropNameInTable="EventDateColumn" msprop:Generator_UserColumnName="EventDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AttendeeStateCode" msprop:Generator_ColumnVarNameInTable="columnAttendeeStateCode" msprop:Generator_ColumnPropNameInRow="AttendeeStateCode" msprop:Generator_ColumnPropNameInTable="AttendeeStateCodeColumn" msprop:Generator_UserColumnName="AttendeeStateCode" type="xs:int" />
+              <xs:element name="AttendeeStateCodeName" msprop:Generator_ColumnVarNameInTable="columnAttendeeStateCodeName" msprop:Generator_ColumnPropNameInRow="AttendeeStateCodeName" msprop:Generator_ColumnPropNameInTable="AttendeeStateCodeNameColumn" msprop:Generator_UserColumnName="AttendeeStateCodeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ordernumber" msprop:Generator_ColumnVarNameInTable="columnordernumber" msprop:Generator_ColumnPropNameInRow="ordernumber" msprop:Generator_ColumnPropNameInTable="ordernumberColumn" msprop:Generator_UserColumnName="ordernumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OpportunityStatecode" msprop:Generator_ColumnVarNameInTable="columnOpportunityStatecode" msprop:Generator_ColumnPropNameInRow="OpportunityStatecode" msprop:Generator_ColumnPropNameInTable="OpportunityStatecodeColumn" msprop:Generator_UserColumnName="OpportunityStatecode" type="xs:int" />
+              <xs:element name="OpportunityStateCodeName" msprop:Generator_ColumnVarNameInTable="columnOpportunityStateCodeName" msprop:Generator_ColumnPropNameInRow="OpportunityStateCodeName" msprop:Generator_ColumnPropNameInTable="OpportunityStateCodeNameColumn" msprop:Generator_UserColumnName="OpportunityStateCodeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="attendeeinvoicedetailstatecodename" msprop:Generator_ColumnVarNameInTable="columnattendeeinvoicedetailstatecodename" msprop:Generator_ColumnPropNameInRow="attendeeinvoicedetailstatecodename" msprop:Generator_ColumnPropNameInTable="attendeeinvoicedetailstatecodenameColumn" msprop:Generator_UserColumnName="attendeeinvoicedetailstatecodename" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="invoicestatecode" msprop:Generator_ColumnVarNameInTable="columninvoicestatecode" msprop:Generator_ColumnPropNameInRow="invoicestatecode" msprop:Generator_ColumnPropNameInTable="invoicestatecodeColumn" msprop:Generator_UserColumnName="invoicestatecode" type="xs:int" />
+              <xs:element name="invoicestatecodename" msprop:Generator_ColumnVarNameInTable="columninvoicestatecodename" msprop:Generator_ColumnPropNameInRow="invoicestatecodename" msprop:Generator_ColumnPropNameInTable="invoicestatecodenameColumn" msprop:Generator_UserColumnName="invoicestatecodename" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SalesPerson" msprop:Generator_ColumnVarNameInTable="columnSalesPerson" msprop:Generator_ColumnPropNameInRow="SalesPerson" msprop:Generator_ColumnPropNameInTable="SalesPersonColumn" msprop:Generator_UserColumnName="SalesPerson" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="160" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NumberAttended" msprop:Generator_ColumnVarNameInTable="columnNumberAttended" msprop:Generator_ColumnPropNameInRow="NumberAttended" msprop:Generator_ColumnPropNameInTable="NumberAttendedColumn" msprop:Generator_UserColumnName="NumberAttended" type="xs:int" minOccurs="0" />
+              <xs:element name="AttendeeState" msprop:Generator_ColumnVarNameInTable="columnAttendeeState" msprop:Generator_ColumnPropNameInRow="AttendeeState" msprop:Generator_ColumnPropNameInTable="AttendeeStateColumn" msprop:Generator_UserColumnName="AttendeeState" type="xs:int" minOccurs="0" />
+              <xs:element name="AttendeeStateName" msprop:Generator_ColumnVarNameInTable="columnAttendeeStateName" msprop:Generator_ColumnPropNameInRow="AttendeeStateName" msprop:Generator_ColumnPropNameInTable="AttendeeStateNameColumn" msprop:Generator_UserColumnName="AttendeeStateName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CommissionPaid" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCommissionPaid" msprop:Generator_ColumnPropNameInRow="CommissionPaid" msprop:Generator_ColumnPropNameInTable="CommissionPaidColumn" msprop:Generator_UserColumnName="CommissionPaid" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CommissionPercent" msprop:Generator_ColumnVarNameInTable="columnCommissionPercent" msprop:Generator_ColumnPropNameInRow="CommissionPercent" msprop:Generator_ColumnPropNameInTable="CommissionPercentColumn" msprop:Generator_UserColumnName="CommissionPercent" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

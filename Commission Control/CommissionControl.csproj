@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9571B2D1-97D4-4F14-AA4F-78AC67A2DACE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>D3.Commission</RootNamespace>
+    <AssemblyName>D3.Commission</AssemblyName>
+    <ApplicationIcon>Cash.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="microsoft.crm.sdk, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\microsoft.crm.sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="microsoft.crm.sdktypeproxy, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\microsoft.crm.sdktypeproxy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommissionNumbers.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CommissionNumbers.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Constants.cs" />
+    <Compile Include="discrepancies.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>discrepancies.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CommissionControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommissionControl.Designer.cs">
+      <DependentUpon>CommissionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileUtility.cs" />
+    <Compile Include="IncompleteSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IncompleteSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LogUtility.cs" />
+    <Compile Include="PriorSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PriorSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RenewalProducts.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RenewalProducts.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="SettingsEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsEditor.designer.cs">
+      <DependentUpon>SettingsEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tier1Set.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tier1Set.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProjectsSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectsSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CommissionReport.rdlc" />
+    <EmbeddedResource Include="CommissionControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CommissionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report.rdlc" />
+    <EmbeddedResource Include="ReportForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SettingsEditor.resx">
+      <DependentUpon>SettingsEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="CommissionNumbers.xsc">
+      <DependentUpon>CommissionNumbers.xsd</DependentUpon>
+    </None>
+    <None Include="CommissionNumbers.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CommissionNumbers.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CommissionNumbers.xss">
+      <DependentUpon>CommissionNumbers.xsd</DependentUpon>
+    </None>
+    <None Include="discrepancies.xsc">
+      <DependentUpon>discrepancies.xsd</DependentUpon>
+    </None>
+    <None Include="discrepancies.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>discrepancies.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="discrepancies.xss">
+      <DependentUpon>discrepancies.xsd</DependentUpon>
+    </None>
+    <None Include="IncompleteSet.xsc">
+      <DependentUpon>IncompleteSet.xsd</DependentUpon>
+    </None>
+    <None Include="IncompleteSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IncompleteSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="IncompleteSet.xss">
+      <DependentUpon>IncompleteSet.xsd</DependentUpon>
+    </None>
+    <None Include="PriorSet.xsc">
+      <DependentUpon>PriorSet.xsd</DependentUpon>
+    </None>
+    <None Include="PriorSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PriorSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PriorSet.xss">
+      <DependentUpon>PriorSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\CommissionNumbers.datasource" />
+    <None Include="Properties\DataSources\discrepancies.datasource" />
+    <None Include="Properties\DataSources\RenewalProducts.datasource" />
+    <None Include="Properties\DataSources\Tier2Set.datasource" />
+    <None Include="RenewalProducts.xsc">
+      <DependentUpon>RenewalProducts.xsd</DependentUpon>
+    </None>
+    <None Include="RenewalProducts.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RenewalProducts.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RenewalProducts.xss">
+      <DependentUpon>RenewalProducts.xsd</DependentUpon>
+    </None>
+    <None Include="Tier1Set.xsc">
+      <DependentUpon>Tier1Set.xsd</DependentUpon>
+    </None>
+    <None Include="Tier1Set.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Tier1Set.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Tier1Set.xss">
+      <DependentUpon>Tier1Set.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectsSet.xsc">
+      <DependentUpon>ProjectsSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectsSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectsSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ProjectsSet.xss">
+      <DependentUpon>ProjectsSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\ProductsSet.datasource" />
+    <None Include="Properties\DataSources\ProjectsSet.datasource" />
+    <None Include="Properties\DataSources\TrainingSet.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Tier2Set.xsc">
+      <DependentUpon>Tier2Set.xsd</DependentUpon>
+    </None>
+    <None Include="Tier2Set.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Tier2Set.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Tier2Set.xss">
+      <DependentUpon>Tier2Set.xsd</DependentUpon>
+    </None>
+    <None Include="TrainingSet.xsc">
+      <DependentUpon>TrainingSet.xsd</DependentUpon>
+    </None>
+    <None Include="TrainingSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TrainingSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TrainingSet.xss">
+      <DependentUpon>TrainingSet.xsd</DependentUpon>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess.cs" />
+    <Compile Include="Tier2Set.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tier2Set.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TrainingSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrainingSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Cash.ico" />
+    <EmbeddedResource Include="Settings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

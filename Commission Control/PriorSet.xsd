@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PriorSet" targetNamespace="http://tempuri.org/PriorSet.xsd" xmlns:mstns="http://tempuri.org/PriorSet.xsd" xmlns="http://tempuri.org/PriorSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="D3_TECHNOLOGIES_MSCRMConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="D3_TECHNOLOGIES_MSCRMConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.D3.Commission.Properties.Settings.GlobalReference.Default.D3_TECHNOLOGIES_MSCRMConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TSPriorTableAdapter" GeneratorDataComponentClassName="TSPriorTableAdapter" Name="TSPrior" UserDataComponentName="TSPriorTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="D3_TECHNOLOGIES_MSCRMConnectionString (Settings)" DbObjectName="D3_TECHNOLOGIES_MSCRM.dbo.TSPrior" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT SalesPerson, ID, EstimatedCost, ExtendedPrice, CloseDate, CommissionPercent, PBP, OpportunityName, ActualCost, EstimatedPaidDate, AccountName, Type, InvoiceCommissionPaid, CommissionPaid FROM dbo.TSPrior</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SalesPerson" DataSetColumn="SalesPerson" />
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="EstimatedCost" DataSetColumn="EstimatedCost" />
+              <Mapping SourceColumn="ExtendedPrice" DataSetColumn="ExtendedPrice" />
+              <Mapping SourceColumn="CloseDate" DataSetColumn="CloseDate" />
+              <Mapping SourceColumn="CommissionPercent" DataSetColumn="CommissionPercent" />
+              <Mapping SourceColumn="PBP" DataSetColumn="PBP" />
+              <Mapping SourceColumn="OpportunityName" DataSetColumn="OpportunityName" />
+              <Mapping SourceColumn="ActualCost" DataSetColumn="ActualCost" />
+              <Mapping SourceColumn="EstimatedPaidDate" DataSetColumn="EstimatedPaidDate" />
+              <Mapping SourceColumn="AccountName" DataSetColumn="AccountName" />
+              <Mapping SourceColumn="Type" DataSetColumn="Type" />
+              <Mapping SourceColumn="InvoiceCommissionPaid" DataSetColumn="InvoiceCommissionPaid" />
+              <Mapping SourceColumn="CommissionPaid" DataSetColumn="CommissionPaid" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PriorSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="PriorSet" msprop:Generator_UserDSName="PriorSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TSPrior" msprop:Generator_TableClassName="TSPriorDataTable" msprop:Generator_TableVarName="tableTSPrior" msprop:Generator_TablePropName="TSPrior" msprop:Generator_RowDeletingName="TSPriorRowDeleting" msprop:Generator_UserTableName="TSPrior" msprop:Generator_RowChangingName="TSPriorRowChanging" msprop:Generator_RowEvHandlerName="TSPriorRowChangeEventHandler" msprop:Generator_RowDeletedName="TSPriorRowDeleted" msprop:Generator_RowEvArgName="TSPriorRowChangeEvent" msprop:Generator_RowChangedName="TSPriorRowChanged" msprop:Generator_RowClassName="TSPriorRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SalesPerson" msprop:Generator_ColumnVarNameInTable="columnSalesPerson" msprop:Generator_ColumnPropNameInRow="SalesPerson" msprop:Generator_ColumnPropNameInTable="SalesPersonColumn" msprop:Generator_UserColumnName="SalesPerson" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="160" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" />
+              <xs:element name="EstimatedCost" msprop:Generator_ColumnVarNameInTable="columnEstimatedCost" msprop:Generator_ColumnPropNameInRow="EstimatedCost" msprop:Generator_ColumnPropNameInTable="EstimatedCostColumn" msprop:Generator_UserColumnName="EstimatedCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ExtendedPrice" msprop:Generator_ColumnVarNameInTable="columnExtendedPrice" msprop:Generator_ColumnPropNameInRow="ExtendedPrice" msprop:Generator_ColumnPropNameInTable="ExtendedPriceColumn" msprop:Generator_UserColumnName="ExtendedPrice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CloseDate" msprop:Generator_ColumnVarNameInTable="columnCloseDate" msprop:Generator_ColumnPropNameInRow="CloseDate" msprop:Generator_ColumnPropNameInTable="CloseDateColumn" msprop:Generator_UserColumnName="CloseDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CommissionPercent" msprop:Generator_ColumnVarNameInTable="columnCommissionPercent" msprop:Generator_ColumnPropNameInRow="CommissionPercent" msprop:Generator_ColumnPropNameInTable="CommissionPercentColumn" msprop:Generator_UserColumnName="CommissionPercent" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PBP" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPBP" msprop:Generator_ColumnPropNameInRow="PBP" msprop:Generator_ColumnPropNameInTable="PBPColumn" msprop:Generator_UserColumnName="PBP" type="xs:double" minOccurs="0" />
+              <xs:element name="OpportunityName" msprop:Generator_ColumnVarNameInTable="columnOpportunityName" msprop:Generator_ColumnPropNameInRow="OpportunityName" msprop:Generator_ColumnPropNameInTable="OpportunityNameColumn" msprop:Generator_UserColumnName="OpportunityName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ActualCost" msprop:Generator_ColumnVarNameInTable="columnActualCost" msprop:Generator_ColumnPropNameInRow="ActualCost" msprop:Generator_ColumnPropNameInTable="ActualCostColumn" msprop:Generator_UserColumnName="ActualCost" type="xs:double" minOccurs="0" />
+              <xs:element name="EstimatedPaidDate" msprop:Generator_ColumnVarNameInTable="columnEstimatedPaidDate" msprop:Generator_ColumnPropNameInRow="EstimatedPaidDate" msprop:Generator_ColumnPropNameInTable="EstimatedPaidDateColumn" msprop:Generator_UserColumnName="EstimatedPaidDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AccountName" msprop:Generator_ColumnVarNameInTable="columnAccountName" msprop:Generator_ColumnPropNameInRow="AccountName" msprop:Generator_ColumnPropNameInTable="AccountNameColumn" msprop:Generator_UserColumnName="AccountName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="160" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Type" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnType" msprop:Generator_ColumnPropNameInRow="Type" msprop:Generator_ColumnPropNameInTable="TypeColumn" msprop:Generator_UserColumnName="Type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvoiceCommissionPaid" msprop:Generator_ColumnVarNameInTable="columnInvoiceCommissionPaid" msprop:Generator_ColumnPropNameInRow="InvoiceCommissionPaid" msprop:Generator_ColumnPropNameInTable="InvoiceCommissionPaidColumn" msprop:Generator_UserColumnName="InvoiceCommissionPaid" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CommissionPaid" msprop:Generator_ColumnVarNameInTable="columnCommissionPaid" msprop:Generator_ColumnPropNameInRow="CommissionPaid" msprop:Generator_ColumnPropNameInTable="CommissionPaidColumn" msprop:Generator_UserColumnName="CommissionPaid" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
