@@ -37,7 +37,8 @@ SELECT
 	ProductName, 
 	ExtendedCost, 
 	ExtendedPrice,
-	Quantity 
+	Quantity,
+	OpportunityID 
 FROM
 (	SELECT 
 		'invoicedetail' Type, 
@@ -50,7 +51,8 @@ FROM
 		id.productidname ProductName, 
 		NULL ExtendedCost, 
 		id.priceperunit * id.quantity - id.manualdiscountamount ExtendedPrice,
-		id.quantity
+		id.quantity,
+		o.opportunityid
 	FROM dbo.FilteredInvoice i WITH (NOLOCK)
 	INNER JOIN dbo.FilteredInvoiceDetail id WITH (NOLOCK) ON i.invoiceid = id.invoiceid 
 	INNER JOIN dbo.FilteredProduct p WITH (NOLOCK) ON id.productid = p.productid
@@ -76,7 +78,8 @@ FROM
 		sod.productidname ProductName, 
 		(sod.d3_finalcost * sod.quantity) * (1 - sod.d3_autodeskdiscount / 100) ExtendedCost, 
 		NULL ExtendedPrice,
-		sod.quantity
+		sod.quantity,
+		o.opportunityid
 	FROM dbo.FilteredSalesOrderDetail sod WITH (NOLOCK) 
 	INNER JOIN dbo.FilteredSalesOrder so WITH (NOLOCK) ON sod.salesorderid = so.salesorderid 
 	INNER JOIN dbo.FilteredProduct p WITH (NOLOCK) ON sod.productid = p.productid 

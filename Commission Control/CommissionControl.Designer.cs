@@ -1189,6 +1189,7 @@ namespace D3.Commission
             this.Tier1All.TabIndex = 154;
             this.Tier1All.Text = "All";
             this.Tier1All.UseVisualStyleBackColor = true;
+            this.Tier1All.CheckedChanged += new System.EventHandler(this.Tier1All_CheckedChanged);
             // 
             // Tier1Commission
             // 
@@ -1335,6 +1336,7 @@ namespace D3.Commission
             this.Tier2All.TabIndex = 155;
             this.Tier2All.Text = "All";
             this.Tier2All.UseVisualStyleBackColor = true;
+            this.Tier2All.CheckedChanged += new System.EventHandler(this.Tier2All_CheckedChanged);
             // 
             // Tier2Commission
             // 
@@ -1482,6 +1484,7 @@ namespace D3.Commission
             this.RenewalAll.TabIndex = 156;
             this.RenewalAll.Text = "All";
             this.RenewalAll.UseVisualStyleBackColor = true;
+            this.RenewalAll.CheckedChanged += new System.EventHandler(this.RenewalAll_CheckedChanged);
             // 
             // RenewalCommission
             // 

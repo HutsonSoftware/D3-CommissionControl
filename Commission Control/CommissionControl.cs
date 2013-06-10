@@ -5,6 +5,7 @@ using System.Data;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 
 namespace D3.Commission
@@ -1707,6 +1708,48 @@ namespace D3.Commission
             checkColumn.Name = "PayCommission";
             checkColumn.HeaderText = "";
             checkColumn.ReadOnly = false;
+            TrainingGrid.Columns.Add(checkColumn);
+            TrainingGrid.Columns["PayCommission"].Width = 25;
+            
+            TrainingGrid.Columns.Add("AttendeeInvoiceDetailId", "AttendeeInvoiceDetailId");
+            TrainingGrid.Columns["AttendeeInvoiceDetailId"].Visible = false;
+            
+            TrainingGrid.Columns.Add("SalesPerson", "Sales Person");
+            TrainingGrid.Columns["SalesPerson"].Visible = false;
+            
+            TrainingGrid.Columns.Add("Date", "Date");
+            TrainingGrid.Columns["Date"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+            
+            TrainingGrid.Columns.Add("EventName", "Event Name");
+            TrainingGrid.Columns["EventName"].Width = 140;
+
+            DataGridViewLinkColumn linkColumn = new DataGridViewLinkColumn();
+            linkColumn.Name = "OpportunityName";
+            linkColumn.HeaderText = "Opportunity Name";
+            linkColumn.UseColumnTextForLinkValue = false;
+            linkColumn.LinkBehavior = LinkBehavior.HoverUnderline;
+            linkColumn.TrackVisitedState = false;
+            TrainingGrid.Columns.Add(linkColumn);
+            TrainingGrid.Columns["OpportunityName"].Width = 140;
+            
+            TrainingGrid.Columns.Add("AccountName", "Account Name");
+            TrainingGrid.Columns["AccountName"].Width = 125;
+            
+            TrainingGrid.Columns.Add("AttendeeName", "Attendee Name");
+            TrainingGrid.Columns["AttendeeName"].Width = 100;
+            
+            TrainingGrid.Columns.Add("Cost", "Cost");
+            TrainingGrid.Columns["Cost"].Width = 65;
+            
+            TrainingGrid.Columns.Add("Price", "Price");
+            TrainingGrid.Columns["Price"].Width = 65;
+            
+            TrainingGrid.Columns.Add("Profit", "Profit");
+            TrainingGrid.Columns["Profit"].Width = 65;
+
+            TrainingGrid.Columns.Add("OpportunityID", "OpportunityID");
+            TrainingGrid.Columns["OpportunityID"].ReadOnly = true;
+            TrainingGrid.Columns["OpportunityID"].Visible = false;
 
             DataGridViewComboBoxColumn percentColumn = new DataGridViewComboBoxColumn();
             percentColumn.DisplayStyle = DataGridViewComboBoxDisplayStyle.ComboBox;
@@ -1716,36 +1759,15 @@ namespace D3.Commission
             List<String> items = new List<string>(21);
             items.AddRange(new String[] { "0", "5", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "60", "65", "70", "75", "80", "85", "90", "95", "100" });
             percentColumn.DataSource = items;
-
-            TrainingGrid.Columns.Add(checkColumn);
-            TrainingGrid.Columns["PayCommission"].Width = 25;
-            TrainingGrid.Columns.Add("AttendeeInvoiceDetailId", "AttendeeInvoiceDetailId");
-            TrainingGrid.Columns.Add("SalesPerson", "Sales Person");
-            TrainingGrid.Columns.Add("Date", "Date");
-            TrainingGrid.Columns["Date"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-            TrainingGrid.Columns.Add("EventName", "Event Name");
-            TrainingGrid.Columns["EventName"].Width = 140;
-            TrainingGrid.Columns.Add("OpportunityName", "Opportunity Name");
-            TrainingGrid.Columns["OpportunityName"].Width = 140;
-            TrainingGrid.Columns.Add("AccountName", "Account Name");
-            TrainingGrid.Columns["AccountName"].Width = 125;
-            TrainingGrid.Columns.Add("AttendeeName", "Attendee Name");
-            TrainingGrid.Columns["AttendeeName"].Width = 100;
-            TrainingGrid.Columns.Add("Cost", "Cost");
-            TrainingGrid.Columns["Cost"].Width = 65;
-            TrainingGrid.Columns.Add("Price", "Price");
-            TrainingGrid.Columns["Price"].Width = 65;
-            TrainingGrid.Columns.Add("Profit", "Profit");
-            TrainingGrid.Columns["Profit"].Width = 65;
             TrainingGrid.Columns.Add(percentColumn);
             TrainingGrid.Columns["CommissionPercent"].Width = 40;
+            
             TrainingGrid.Columns.Add("Margin", "Margin");
             TrainingGrid.Columns["Margin"].Width = 65;
+            
             TrainingGrid.Columns.Add("isDirty", "isDirty");
-
-            TrainingGrid.Columns["AttendeeInvoiceDetailId"].Visible = false;
-            TrainingGrid.Columns["SalesPerson"].Visible = false;
             TrainingGrid.Columns["isDirty"].Visible = false;
+
             TrainingGrid.CellContentClick += new DataGridViewCellEventHandler(TrainingGrid_CellContentClick);
             TrainingGrid.CellValueChanged += new DataGridViewCellEventHandler(TrainingGrid_CellValueChanged);
         }
@@ -1771,6 +1793,11 @@ namespace D3.Commission
                     TrainingGrid.CurrentCell.Value = true;
                 }
             }
+            else if (e.ColumnIndex == 5 && e.RowIndex != -1)
+            {
+                string url = "http://d3crm:5555/D3TECHNOLOGIES/sfa/opps/edit.aspx?id={" + TrainingGrid.CurrentRow.Cells["OpportunityID"].Value + "}#";
+                Process.Start(url);
+            }
             else if (e.ColumnIndex != 11 && e.RowIndex != -1)
             {
                 TrainingGrid.CurrentCell.ReadOnly = true;
@@ -1779,13 +1806,13 @@ namespace D3.Commission
 
         private void TrainingGrid_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 0 || e.ColumnIndex == 11)
+            if (e.ColumnIndex == 0 || e.ColumnIndex == 13)
             {
                 CalculateTrainingTotals();
                 CalculateBigTotal();
                 TrainingGrid["isDirty", e.RowIndex].Value = "true";
             }
-            else if (e.ColumnIndex != 11 && e.ColumnIndex != 13)
+            else if (e.ColumnIndex != 12 && e.ColumnIndex != 14)
             {
                 MessageBox.Show("DO NOT CHANGE VALUES WITHIN THE GRID");
             }
@@ -1901,6 +1928,51 @@ namespace D3.Commission
             checkColumn.Name = "PayCommission";
             checkColumn.HeaderText = "";
             checkColumn.ReadOnly = false;
+            ProjectGrid.Columns.Add(checkColumn);
+            ProjectGrid.Columns["PayCommission"].Width = 25;
+
+            ProjectGrid.Columns.Add("Type", "Type");
+            ProjectGrid.Columns["Type"].Visible = false;
+            
+            ProjectGrid.Columns.Add("EntityID", "EntityID");
+            ProjectGrid.Columns["EntityID"].Visible = false;
+            
+            ProjectGrid.Columns.Add("SalesPerson", "Sales Person");
+            ProjectGrid.Columns["SalesPerson"].Visible = false;
+            
+            ProjectGrid.Columns.Add("Date", "Date");
+            ProjectGrid.Columns["Date"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+            
+            ProjectGrid.Columns.Add("ProjectName", "Project Name");
+            ProjectGrid.Columns["ProjectName"].Width = 140;
+            
+            DataGridViewLinkColumn linkColumn = new DataGridViewLinkColumn();
+            linkColumn.Name = "OpportunityName";
+            linkColumn.HeaderText = "Opportunity Name";
+            linkColumn.UseColumnTextForLinkValue = false;
+            linkColumn.LinkBehavior = LinkBehavior.HoverUnderline;
+            linkColumn.TrackVisitedState = false;
+            ProjectGrid.Columns.Add(linkColumn);
+            ProjectGrid.Columns["OpportunityName"].Width = 145;
+            
+            ProjectGrid.Columns.Add("AccountName", "Account Name");
+            ProjectGrid.Columns["AccountName"].Width = 125;
+            
+            ProjectGrid.Columns.Add("ContactName", "Contact Name");
+            ProjectGrid.Columns["ContactName"].Width = 100;
+            
+            ProjectGrid.Columns.Add("ProductName", "Product Name");
+            ProjectGrid.Columns["ProductName"].Width = 145;
+            
+            ProjectGrid.Columns.Add("ExtendedCost", "Extended Cost");
+            ProjectGrid.Columns["ExtendedCost"].Width = 65;
+            
+            ProjectGrid.Columns.Add("ExtendedPrice", "Extended Price");
+            ProjectGrid.Columns["ExtendedPrice"].Width = 65;
+
+            ProjectGrid.Columns.Add("OpportunityID", "OpportunityID");
+            ProjectGrid.Columns["OpportunityID"].ReadOnly = true;
+            ProjectGrid.Columns["OpportunityID"].Visible = false;
 
             DataGridViewComboBoxColumn percentColumn = new DataGridViewComboBoxColumn();
             percentColumn.DisplayStyle = DataGridViewComboBoxDisplayStyle.ComboBox;
@@ -1909,36 +1981,11 @@ namespace D3.Commission
             percentColumn.ReadOnly = false;
             List<String> items = new List<string>(21);
             items.AddRange(new String[] { "0", "5", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "60", "65", "70", "75", "80", "85", "90", "95", "100" });
-            percentColumn.DataSource = items;
-
-            ProjectGrid.Columns.Add(checkColumn);
-            ProjectGrid.Columns["PayCommission"].Width = 25;
-            ProjectGrid.Columns.Add("Type", "Type");
-            ProjectGrid.Columns.Add("EntityID", "EntityID");
-            ProjectGrid.Columns.Add("SalesPerson", "Sales Person");
-            ProjectGrid.Columns.Add("Date", "Date");
-            ProjectGrid.Columns["Date"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-            ProjectGrid.Columns.Add("ProjectName", "Project Name");
-            ProjectGrid.Columns["ProjectName"].Width = 140;
-            ProjectGrid.Columns.Add("OpportunityName", "Opportunity Name");
-            ProjectGrid.Columns["OpportunityName"].Width = 145;
-            ProjectGrid.Columns.Add("AccountName", "Account Name");
-            ProjectGrid.Columns["AccountName"].Width = 125;
-            ProjectGrid.Columns.Add("ContactName", "Contact Name");
-            ProjectGrid.Columns["ContactName"].Width = 100;
-            ProjectGrid.Columns.Add("ProductName", "Product Name");
-            ProjectGrid.Columns["ProductName"].Width = 145;
-            ProjectGrid.Columns.Add("ExtendedCost", "Extended Cost");
-            ProjectGrid.Columns["ExtendedCost"].Width = 65;
-            ProjectGrid.Columns.Add("ExtendedPrice", "Extended Price");
-            ProjectGrid.Columns["ExtendedPrice"].Width = 65;
+            percentColumn.DataSource = items; 
             ProjectGrid.Columns.Add(percentColumn);
             ProjectGrid.Columns["CommissionPercent"].Width = 40;
-            ProjectGrid.Columns.Add("isDirty", "isDirty");
 
-            ProjectGrid.Columns["Type"].Visible = false;
-            ProjectGrid.Columns["EntityID"].Visible = false;
-            ProjectGrid.Columns["SalesPerson"].Visible = false;
+            ProjectGrid.Columns.Add("isDirty", "isDirty");
             ProjectGrid.Columns["isDirty"].Visible = false;
 
             ProjectGrid.CellContentClick += new DataGridViewCellEventHandler(ProjectGrid_CellContentClick);
@@ -1966,6 +2013,11 @@ namespace D3.Commission
                     ProjectGrid.CurrentCell.Value = true;
                 }
             }
+            else if (e.ColumnIndex == 6 && e.RowIndex != -1)
+            {
+                string url = "http://d3crm:5555/D3TECHNOLOGIES/sfa/opps/edit.aspx?id={" + ProjectGrid.CurrentRow.Cells["OpportunityID"].Value + "}#";
+                Process.Start(url);
+            }
             else if (e.ColumnIndex != 12 && e.RowIndex != -1)
             {
                 ProjectGrid.CurrentCell.ReadOnly = true;
@@ -1980,7 +2032,7 @@ namespace D3.Commission
                 CalculateBigTotal();
                 ProjectGrid["isDirty", e.RowIndex].Value = "true";
             }
-            else if (e.ColumnIndex != 12 && e.ColumnIndex != 13)
+            else if (e.ColumnIndex != 13 && e.ColumnIndex != 14)
             {
                 MessageBox.Show("DO NOT CHANGE VALUES WITHIN THE GRID");
             }
@@ -2109,6 +2161,51 @@ namespace D3.Commission
             checkColumn.Name = "PayCommission";
             checkColumn.HeaderText = "";
             checkColumn.ReadOnly = false;
+            Tier1Grid.Columns.Add(checkColumn);
+            Tier1Grid.Columns["PayCommission"].Width = 25;
+            
+            Tier1Grid.Columns.Add("Type", "Type");
+            Tier1Grid.Columns["Type"].Visible = false;
+            
+            Tier1Grid.Columns.Add("EntityID", "EntityID");
+            Tier1Grid.Columns["EntityID"].Visible = false;
+            
+            Tier1Grid.Columns.Add("SalesPerson", "Sales Person");
+            Tier1Grid.Columns["SalesPerson"].Visible = false;
+            
+            Tier1Grid.Columns.Add("Date", "Date");
+            Tier1Grid.Columns["Date"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+
+            DataGridViewLinkColumn linkColumn = new DataGridViewLinkColumn();
+            linkColumn.Name = "OpportunityName";
+            linkColumn.HeaderText = "Opportunity Name";
+            linkColumn.UseColumnTextForLinkValue = false;
+            linkColumn.LinkBehavior = LinkBehavior.HoverUnderline;
+            linkColumn.TrackVisitedState = false;
+            Tier1Grid.Columns.Add(linkColumn);
+            Tier1Grid.Columns["OpportunityName"].Width = 145;
+            
+            Tier1Grid.Columns.Add("AccountName", "Account Name");
+            Tier1Grid.Columns["AccountName"].Width = 125;
+            
+            Tier1Grid.Columns.Add("ContactName", "Contact Name");
+            Tier1Grid.Columns["ContactName"].Width = 100;
+            
+            Tier1Grid.Columns.Add("ProductName", "Product Name");
+            Tier1Grid.Columns["ProductName"].Width = 145;
+            
+            Tier1Grid.Columns.Add("Quantity", "Quantity");
+            Tier1Grid.Columns["Quantity"].Width = 65;
+            
+            Tier1Grid.Columns.Add("ExtendedCost", "Extended Cost");
+            Tier1Grid.Columns["ExtendedCost"].Width = 65;
+            
+            Tier1Grid.Columns.Add("ExtendedPrice", "Extended Price");
+            Tier1Grid.Columns["ExtendedPrice"].Width = 65;
+
+            Tier1Grid.Columns.Add("OpportunityID", "OpportunityID");
+            Tier1Grid.Columns["OpportunityID"].ReadOnly = true;
+            Tier1Grid.Columns["OpportunityID"].Visible = false;
 
             DataGridViewComboBoxColumn percentColumn = new DataGridViewComboBoxColumn();
             percentColumn.DisplayStyle = DataGridViewComboBoxDisplayStyle.ComboBox;
@@ -2118,38 +2215,11 @@ namespace D3.Commission
             List<String> items = new List<string>(21);
             items.AddRange(new String[] { "0", "5", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "60", "65", "70", "75", "80", "85", "90", "95", "100" });
             percentColumn.DataSource = items;
-
-            Tier1Grid.Columns.Add(checkColumn);
-            Tier1Grid.Columns["PayCommission"].Width = 25;
-            Tier1Grid.Columns.Add("Type", "Type");
-            Tier1Grid.Columns.Add("EntityID", "EntityID");
-            Tier1Grid.Columns.Add("SalesPerson", "Sales Person");
-            Tier1Grid.Columns.Add("Date", "Date");
-            Tier1Grid.Columns["Date"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-            Tier1Grid.Columns.Add("OpportunityName", "Opportunity Name");
-            Tier1Grid.Columns["OpportunityName"].Width = 145;
-            Tier1Grid.Columns.Add("AccountName", "Account Name");
-            Tier1Grid.Columns["AccountName"].Width = 125;
-            Tier1Grid.Columns.Add("ContactName", "Contact Name");
-            Tier1Grid.Columns["ContactName"].Width = 100;
-            Tier1Grid.Columns.Add("ProductName", "Product Name");
-            Tier1Grid.Columns["ProductName"].Width = 145;
-            Tier1Grid.Columns.Add("Opportunity", "Opportunity");
-            Tier1Grid.Columns["Opportunity"].Width = 65;
-            Tier1Grid.Columns.Add("Quantity", "Quantity");
-            Tier1Grid.Columns["Quantity"].Width = 65;
-            Tier1Grid.Columns.Add("ExtendedCost", "Extended Cost");
-            Tier1Grid.Columns["ExtendedCost"].Width = 65;
-            Tier1Grid.Columns.Add("ExtendedPrice", "Extended Price");
-            Tier1Grid.Columns["ExtendedPrice"].Width = 65;
             Tier1Grid.Columns.Add(percentColumn);
             Tier1Grid.Columns["CommissionPercent"].Width = 40;
-            Tier1Grid.Columns.Add("isDirty", "isDirty");
 
-            Tier1Grid.Columns["Type"].Visible = false;
-            Tier1Grid.Columns["EntityID"].Visible = false;
-            Tier1Grid.Columns["SalesPerson"].Visible = false;
-            Tier1Grid.Columns["isDirty"].Visible = false;
+            Tier1Grid.Columns.Add("isDirty", "isDirty");
+            Tier1Grid.Columns["isDirty"].Visible = false;    
 
             Tier1Grid.CellContentClick += new DataGridViewCellEventHandler(Tier1Grid_CellContentClick);
             Tier1Grid.CellValueChanged += new DataGridViewCellEventHandler(Tier1Grid_CellValueChanged);
@@ -2176,6 +2246,11 @@ namespace D3.Commission
                     Tier1Grid.CurrentCell.Value = true;
                 }
             }
+            else if (e.ColumnIndex == 5 && e.RowIndex != -1)
+            {
+                string url = "http://d3crm:5555/D3TECHNOLOGIES/sfa/opps/edit.aspx?id={" + Tier1Grid.CurrentRow.Cells["OpportunityID"].Value + "}#";
+                Process.Start(url);
+            }
             else if (e.ColumnIndex != 11 && e.RowIndex != -1)
             {
                 Tier1Grid.CurrentCell.ReadOnly = true;
@@ -2184,13 +2259,13 @@ namespace D3.Commission
 
         private void Tier1Grid_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 0 || e.ColumnIndex == 11)
+            if (e.ColumnIndex == 0 || e.ColumnIndex == 13)
             {
                 CalculateTier1Totals();
                 CalculateBigTotal();
                 Tier1Grid["isDirty", e.RowIndex].Value = "true";
             }
-            else if (e.ColumnIndex != 11 && e.ColumnIndex != 12)
+            else if (e.ColumnIndex != 13 && e.ColumnIndex != 14)
             {
                 MessageBox.Show("DO NOT CHANGE VALUES WITHIN THE GRID");
             }
@@ -2321,6 +2396,51 @@ namespace D3.Commission
             checkColumn.Name = "PayCommission";
             checkColumn.HeaderText = "";
             checkColumn.ReadOnly = false;
+            Tier2Grid.Columns.Add(checkColumn);
+            Tier2Grid.Columns["PayCommission"].Width = 25;
+
+            Tier2Grid.Columns.Add("Type", "Type");
+            Tier2Grid.Columns["Type"].Visible = false;
+            
+            Tier2Grid.Columns.Add("EntityID", "EntityID");
+            Tier2Grid.Columns["EntityID"].Visible = false;
+            
+            Tier2Grid.Columns.Add("SalesPerson", "Sales Person");
+            Tier2Grid.Columns["SalesPerson"].Visible = false;
+            
+            Tier2Grid.Columns.Add("Date", "Date");
+            Tier2Grid.Columns["Date"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+
+            DataGridViewLinkColumn linkColumn = new DataGridViewLinkColumn();
+            linkColumn.Name = "OpportunityName";
+            linkColumn.HeaderText = "Opportunity Name";
+            linkColumn.UseColumnTextForLinkValue = false;
+            linkColumn.LinkBehavior = LinkBehavior.HoverUnderline;
+            linkColumn.TrackVisitedState = false;
+            Tier2Grid.Columns.Add(linkColumn);
+            Tier2Grid.Columns["OpportunityName"].Width = 145;
+            
+            Tier2Grid.Columns.Add("AccountName", "Account Name");
+            Tier2Grid.Columns["AccountName"].Width = 125;
+            
+            Tier2Grid.Columns.Add("ContactName", "Contact Name");
+            Tier2Grid.Columns["ContactName"].Width = 100;
+            
+            Tier2Grid.Columns.Add("ProductName", "Product Name");
+            Tier2Grid.Columns["ProductName"].Width = 145;
+            
+            Tier2Grid.Columns.Add("Quantity", "Quantity");
+            Tier2Grid.Columns["Quantity"].Width = 65;
+            
+            Tier2Grid.Columns.Add("ExtendedCost", "Extended Cost");
+            Tier2Grid.Columns["ExtendedCost"].Width = 65;
+            
+            Tier2Grid.Columns.Add("ExtendedPrice", "Extended Price");
+            Tier2Grid.Columns["ExtendedPrice"].Width = 65;
+
+            Tier2Grid.Columns.Add("OpportunityID", "OpportunityID");
+            Tier2Grid.Columns["OpportunityID"].ReadOnly = true;
+            Tier2Grid.Columns["OpportunityID"].Visible = false;
 
             DataGridViewComboBoxColumn percentColumn = new DataGridViewComboBoxColumn();
             percentColumn.DisplayStyle = DataGridViewComboBoxDisplayStyle.ComboBox;
@@ -2329,36 +2449,11 @@ namespace D3.Commission
             percentColumn.ReadOnly = false;
             List<String> items = new List<string>(21);
             items.AddRange(new String[] { "0", "5", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "60", "65", "70", "75", "80", "85", "90", "95", "100" });
-            percentColumn.DataSource = items;
-
-            Tier2Grid.Columns.Add(checkColumn);
-            Tier2Grid.Columns["PayCommission"].Width = 25;
-            Tier2Grid.Columns.Add("Type", "Type");
-            Tier2Grid.Columns.Add("EntityID", "EntityID");
-            Tier2Grid.Columns.Add("SalesPerson", "Sales Person");
-            Tier2Grid.Columns.Add("Date", "Date");
-            Tier2Grid.Columns["Date"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-            Tier2Grid.Columns.Add("OpportunityName", "Opportunity Name");
-            Tier2Grid.Columns["OpportunityName"].Width = 145;
-            Tier2Grid.Columns.Add("AccountName", "Account Name");
-            Tier2Grid.Columns["AccountName"].Width = 125;
-            Tier2Grid.Columns.Add("ContactName", "Contact Name");
-            Tier2Grid.Columns["ContactName"].Width = 100;
-            Tier2Grid.Columns.Add("ProductName", "Product Name");
-            Tier2Grid.Columns["ProductName"].Width = 145;
-            Tier2Grid.Columns.Add("Quantity", "Quantity");
-            Tier2Grid.Columns["Quantity"].Width = 65;
-            Tier2Grid.Columns.Add("ExtendedCost", "Extended Cost");
-            Tier2Grid.Columns["ExtendedCost"].Width = 65;
-            Tier2Grid.Columns.Add("ExtendedPrice", "Extended Price");
-            Tier2Grid.Columns["ExtendedPrice"].Width = 65;
+            percentColumn.DataSource = items; 
             Tier2Grid.Columns.Add(percentColumn);
             Tier2Grid.Columns["CommissionPercent"].Width = 40;
+            
             Tier2Grid.Columns.Add("isDirty", "idDirty");
-
-            Tier2Grid.Columns["Type"].Visible = false;
-            Tier2Grid.Columns["EntityID"].Visible = false;
-            Tier2Grid.Columns["SalesPerson"].Visible = false;
             Tier2Grid.Columns["isDirty"].Visible = false;
 
             Tier2Grid.CellContentClick += new DataGridViewCellEventHandler(Tier2Grid_CellContentClick);
@@ -2386,6 +2481,11 @@ namespace D3.Commission
                     Tier2Grid.CurrentCell.Value = true;
                 }
             }
+            else if (e.ColumnIndex == 5 && e.RowIndex != -1)
+            {
+                string url = "http://d3crm:5555/D3TECHNOLOGIES/sfa/opps/edit.aspx?id={" + Tier2Grid.CurrentRow.Cells["OpportunityID"].Value + "}#";
+                Process.Start(url);
+            }
             else if (e.ColumnIndex != 11 && e.RowIndex != -1)
             {
                 Tier2Grid.CurrentCell.ReadOnly = true;
@@ -2394,13 +2494,13 @@ namespace D3.Commission
 
         void Tier2Grid_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 0 || e.ColumnIndex == 11)
+            if (e.ColumnIndex == 0 || e.ColumnIndex == 13)
             {
                 CalculateTier2Totals();
                 CalculateBigTotal();
                 Tier2Grid["isDirty", e.RowIndex].Value = "true";
             }
-            else if (e.ColumnIndex != 11 && e.ColumnIndex != 12)
+            else if (e.ColumnIndex != 13 && e.ColumnIndex != 14)
             {
                 MessageBox.Show("DO NOT CHANGE VALUES WITHIN THE GRID");
             }
@@ -2505,7 +2605,52 @@ namespace D3.Commission
             checkColumn.Name = "PayCommission";
             checkColumn.HeaderText = "";
             checkColumn.ReadOnly = false;
+            RenewalGrid.Columns.Add(checkColumn);
+            RenewalGrid.Columns["PayCommission"].Width = 25;
+            
+            RenewalGrid.Columns.Add("Type", "Type");
+            RenewalGrid.Columns["Type"].Visible = false;
+            
+            RenewalGrid.Columns.Add("EntityID", "EntityID");
+            RenewalGrid.Columns["EntityID"].Visible = false;
+            
+            RenewalGrid.Columns.Add("SalesPerson", "Sales Person");
+            RenewalGrid.Columns["SalesPerson"].Visible = false;
+            
+            RenewalGrid.Columns.Add("Date", "Date");
+            RenewalGrid.Columns["Date"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
 
+            DataGridViewLinkColumn linkColumn = new DataGridViewLinkColumn();
+            linkColumn.Name = "OpportunityName";
+            linkColumn.HeaderText = "Opportunity Name";
+            linkColumn.UseColumnTextForLinkValue = false;
+            linkColumn.LinkBehavior = LinkBehavior.HoverUnderline;
+            linkColumn.TrackVisitedState = false;
+            RenewalGrid.Columns.Add(linkColumn);
+            RenewalGrid.Columns["OpportunityName"].Width = 145;
+            
+            RenewalGrid.Columns.Add("AccountName", "Account Name");
+            RenewalGrid.Columns["AccountName"].Width = 125;
+            
+            RenewalGrid.Columns.Add("ContactName", "Contact Name");
+            RenewalGrid.Columns["Contactname"].Width = 100;
+            
+            RenewalGrid.Columns.Add("ProductName", "Product Name");
+            RenewalGrid.Columns["Productname"].Width = 145;
+            
+            RenewalGrid.Columns.Add("Quantity", "Quantity");
+            RenewalGrid.Columns["Quantity"].Width = 65;
+            
+            RenewalGrid.Columns.Add("ExtendedCost", "Extended Cost");
+            RenewalGrid.Columns["ExtendedCost"].Width = 65;
+            
+            RenewalGrid.Columns.Add("ExtendedPrice", "Extended Price");
+            RenewalGrid.Columns["ExtendedPrice"].Width = 65;
+
+            RenewalGrid.Columns.Add("OpportunityID", "OpportunityID");
+            RenewalGrid.Columns["OpportunityID"].ReadOnly = true;
+            RenewalGrid.Columns["OpportunityID"].Visible = false;
+            
             DataGridViewComboBoxColumn percentColumn = new DataGridViewComboBoxColumn();
             percentColumn.DisplayStyle = DataGridViewComboBoxDisplayStyle.ComboBox;
             percentColumn.Name = "CommissionPercent";
@@ -2513,36 +2658,11 @@ namespace D3.Commission
             percentColumn.ReadOnly = false;
             List<String> items = new List<string>(21);
             items.AddRange(new String[] { "0", "5", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "60", "65", "70", "75", "80", "85", "90", "95", "100" });
-            percentColumn.DataSource = items;
-
-            RenewalGrid.Columns.Add(checkColumn);
-            RenewalGrid.Columns["PayCommission"].Width = 25;
-            RenewalGrid.Columns.Add("Type", "Type");
-            RenewalGrid.Columns.Add("EntityID", "EntityID");
-            RenewalGrid.Columns.Add("SalesPerson", "Sales Person");
-            RenewalGrid.Columns.Add("Date", "Date");
-            RenewalGrid.Columns["Date"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-            RenewalGrid.Columns.Add("OpportunityName", "Opportunity Name");
-            RenewalGrid.Columns["OpportunityName"].Width = 145;
-            RenewalGrid.Columns.Add("AccountName", "Account Name");
-            RenewalGrid.Columns["AccountName"].Width = 125;
-            RenewalGrid.Columns.Add("ContactName", "Contact Name");
-            RenewalGrid.Columns["Contactname"].Width = 100;
-            RenewalGrid.Columns.Add("ProductName", "Product Name");
-            RenewalGrid.Columns["Productname"].Width = 145;
-            RenewalGrid.Columns.Add("Quantity", "Quantity");
-            RenewalGrid.Columns["Quantity"].Width = 65;
-            RenewalGrid.Columns.Add("ExtendedCost", "Extended Cost");
-            RenewalGrid.Columns["ExtendedCost"].Width = 65;
-            RenewalGrid.Columns.Add("ExtendedPrice", "Extended Price");
-            RenewalGrid.Columns["ExtendedPrice"].Width = 65;
+            percentColumn.DataSource = items; 
             RenewalGrid.Columns.Add(percentColumn);
             RenewalGrid.Columns["CommissionPercent"].Width = 40;
+            
             RenewalGrid.Columns.Add("isDirty", "isDirty");
-
-            RenewalGrid.Columns["Type"].Visible = false;
-            RenewalGrid.Columns["EntityID"].Visible = false;
-            RenewalGrid.Columns["SalesPerson"].Visible = false;
             RenewalGrid.Columns["isDirty"].Visible = false;
 
             RenewalGrid.CellContentClick += new DataGridViewCellEventHandler(RenewalGrid_CellContentClick);
@@ -2570,6 +2690,11 @@ namespace D3.Commission
                     RenewalGrid.CurrentCell.Value = true;
                 }
             }
+            else if (e.ColumnIndex == 5 && e.RowIndex != -1)
+            {
+                string url = "http://d3crm:5555/D3TECHNOLOGIES/sfa/opps/edit.aspx?id={" + RenewalGrid.CurrentRow.Cells["OpportunityID"].Value +"}#";
+                Process.Start(url);
+            }
             else if (e.ColumnIndex != 11 && e.RowIndex != -1)
             {
                 RenewalGrid.CurrentCell.ReadOnly = true;
@@ -2578,13 +2703,13 @@ namespace D3.Commission
 
         void RenewalGrid_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 0 || e.ColumnIndex == 11)
+            if (e.ColumnIndex == 0 || e.ColumnIndex == 13)
             {
                 CalculateRenewalTotals();
                 CalculateBigTotal();
                 RenewalGrid["isDirty", e.RowIndex].Value = "true";
             }
-            else if (e.ColumnIndex != 11 && e.ColumnIndex != 12)
+            else if (e.ColumnIndex != 13 && e.ColumnIndex != 14)
             {
                 MessageBox.Show("DO NOT CHANGE VALUES WITHIN THE GRID");
             }
@@ -2735,9 +2860,6 @@ namespace D3.Commission
         #region Incomplete
         private void InitializeIncompleteGrid()
         {
-            List<String> percents = new List<string>(21);
-            percents.AddRange(new String[] { "0", "5", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "60", "65", "70", "75", "80", "85", "90", "95", "100" });
-
             DataGridViewCheckBoxColumn checkColumn = new DataGridViewCheckBoxColumn(false);
             checkColumn.Name = "PayCommission";
             checkColumn.HeaderText = "";
@@ -2756,8 +2878,14 @@ namespace D3.Commission
             IncompleteGrid.Columns.Add("CloseDate", "Close Date");
             IncompleteGrid.Columns["CloseDate"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
             IncompleteGrid.Columns["CloseDate"].ReadOnly = true;
-            
-            IncompleteGrid.Columns.Add("OpportunityName", "Opportunity Name");
+
+            DataGridViewLinkColumn linkColumn = new DataGridViewLinkColumn();
+            linkColumn.Name = "OpportunityName";
+            linkColumn.HeaderText = "Opportunity Name";
+            linkColumn.UseColumnTextForLinkValue = false;
+            linkColumn.LinkBehavior = LinkBehavior.HoverUnderline;
+            linkColumn.TrackVisitedState = false;
+            IncompleteGrid.Columns.Add(linkColumn);
             IncompleteGrid.Columns["OpportunityName"].Width = 140;
             IncompleteGrid.Columns["OpportunityName"].ReadOnly = true;
             
@@ -2776,12 +2904,14 @@ namespace D3.Commission
             IncompleteGrid.Columns.Add("ExtendedProfit", "Profit");
             IncompleteGrid.Columns["ExtendedProfit"].Width = 65;
             IncompleteGrid.Columns["ExtendedProfit"].ReadOnly = true;
-            
+
             DataGridViewComboBoxColumn percentColumn = new DataGridViewComboBoxColumn();
             percentColumn.DisplayStyle = DataGridViewComboBoxDisplayStyle.ComboBox;
             percentColumn.Name = "CommissionPercent";
             percentColumn.HeaderText = "";
             percentColumn.ReadOnly = false;
+            List<String> percents = new List<string>(21);
+            percents.AddRange(new String[] { "0", "5", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "60", "65", "70", "75", "80", "85", "90", "95", "100" });
             percentColumn.DataSource = percents;
             IncompleteGrid.Columns.Add(percentColumn);
             IncompleteGrid.Columns["CommissionPercent"].Width = 40;
@@ -2817,6 +2947,11 @@ namespace D3.Commission
                 {
                     IncompleteGrid.CurrentCell.Value = true;
                 }
+            }
+            else if (e.ColumnIndex == 4 && e.RowIndex != -1)
+            {
+                string url = "http://d3crm:5555/D3TECHNOLOGIES/sfa/opps/edit.aspx?id={" + IncompleteGrid.CurrentRow.Cells["ID"].Value + "}#";
+                Process.Start(url);
             }
             else if (e.ColumnIndex != 9 && e.RowIndex != -1)
             {
@@ -2972,7 +3107,13 @@ namespace D3.Commission
             PriorGrid.Columns["CloseDate"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
             PriorGrid.Columns["CloseDate"].ReadOnly = true;
 
-            PriorGrid.Columns.Add("OpportunityName", "Opportunity Name");
+            DataGridViewLinkColumn linkColumn = new DataGridViewLinkColumn();
+            linkColumn.Name = "OpportunityName";
+            linkColumn.HeaderText = "Opportunity Name";
+            linkColumn.UseColumnTextForLinkValue = false;
+            linkColumn.LinkBehavior = LinkBehavior.HoverUnderline;
+            linkColumn.TrackVisitedState = false;
+            PriorGrid.Columns.Add(linkColumn);
             PriorGrid.Columns["OpportunityName"].Width = 140;
             PriorGrid.Columns["OpportunityName"].ReadOnly = true;
             
@@ -3030,6 +3171,11 @@ namespace D3.Commission
                 {
                     PriorGrid.CurrentCell.Value = true;
                 }
+            }
+            else if (e.ColumnIndex == 4 && e.RowIndex != -1)
+            {
+                string url = "http://d3crm:5555/D3TECHNOLOGIES/sfa/opps/edit.aspx?id={" + PriorGrid.CurrentRow.Cells["ID"].Value + "}#";
+                Process.Start(url);
             }
             else if (e.ColumnIndex != 9 && e.RowIndex != -1)
             {

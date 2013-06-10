@@ -79,7 +79,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CommissionNumbers.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Constants.cs" />
     <Compile Include="discrepancies.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

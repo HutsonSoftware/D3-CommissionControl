@@ -1,12 +1,10 @@
-C:\Users\Adam\Desktop\Live Mesh\D3\Commission Control\Commission Control\bin\Release\D3.Commission.exe
-C:\Users\Adam\Desktop\Live Mesh\D3\Commission Control\Commission Control\bin\Release\D3.Commission.pdb
-C:\Users\Adam\Desktop\Live Mesh\D3\Commission Control\Commission Control\obj\Release\CommissionControl.csprojResolveAssemblyReference.cache
-C:\Users\Adam\Desktop\Live Mesh\D3\Commission Control\Commission Control\obj\Release\D3.Commission.CommissionControl.resources
-C:\Users\Adam\Desktop\Live Mesh\D3\Commission Control\Commission Control\obj\Release\D3.Commission.Properties.Resources.resources
-C:\Users\Adam\Desktop\Live Mesh\D3\Commission Control\Commission Control\obj\Release\D3.Commission.ReportForm.resources
-C:\Users\Adam\Desktop\Live Mesh\D3\Commission Control\Commission Control\obj\Release\D3.Commission.SettingsEditor.resources
-C:\Users\Adam\Desktop\Live Mesh\D3\Commission Control\Commission Control\obj\Release\CommissionControl.csproj.GenerateResource.Cache
-C:\Users\Adam\Desktop\Live Mesh\D3\Commission Control\Commission Control\obj\Release\RdlCompile.cache
-C:\Users\Adam\Desktop\Live Mesh\D3\Commission Control\Commission Control\obj\Release\RdlCompile.compiled
-C:\Users\Adam\Desktop\Live Mesh\D3\Commission Control\Commission Control\obj\Release\D3.Commission.exe
-C:\Users\Adam\Desktop\Live Mesh\D3\Commission Control\Commission Control\obj\Release\D3.Commission.pdb
+C:\Users\ahutson\Documents\GitHub\D3-CommissionControl\Commission Control\bin\Release\D3.Commission.exe
+C:\Users\ahutson\Documents\GitHub\D3-CommissionControl\Commission Control\bin\Release\D3.Commission.pdb
+C:\Users\ahutson\Documents\GitHub\D3-CommissionControl\Commission Control\obj\Release\CommissionControl.csprojResolveAssemblyReference.cache
+C:\Users\ahutson\Documents\GitHub\D3-CommissionControl\Commission Control\obj\Release\D3.Commission.CommissionControl.resources
+C:\Users\ahutson\Documents\GitHub\D3-CommissionControl\Commission Control\obj\Release\D3.Commission.Properties.Resources.resources
+C:\Users\ahutson\Documents\GitHub\D3-CommissionControl\Commission Control\obj\Release\D3.Commission.ReportForm.resources
+C:\Users\ahutson\Documents\GitHub\D3-CommissionControl\Commission Control\obj\Release\D3.Commission.SettingsEditor.resources
+C:\Users\ahutson\Documents\GitHub\D3-CommissionControl\Commission Control\obj\Release\CommissionControl.csproj.GenerateResource.Cache
+C:\Users\ahutson\Documents\GitHub\D3-CommissionControl\Commission Control\obj\Release\D3.Commission.exe
+C:\Users\ahutson\Documents\GitHub\D3-CommissionControl\Commission Control\obj\Release\D3.Commission.pdb

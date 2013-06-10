@@ -35,7 +35,8 @@ SELECT
 	a.d3_contactidname ContactName, 
 	so.d3_totalcost TotalCost, 
 	aid.d3_price AttendeePrice, 
-	et.d3_attended NumberAttended 
+	et.d3_attended NumberAttended,
+	o.opportunityid 
 FROM dbo.FilteredSalesOrder so WITH (NOLOCK) 
 INNER JOIN dbo.FilteredD3_EventTraining et WITH (NOLOCK) ON so.d3_eventtrainingid = et.d3_eventtrainingid 
 INNER JOIN dbo.FilteredD3_Attendee a WITH (NOLOCK) ON et.d3_eventtrainingid = a.d3_eventid 

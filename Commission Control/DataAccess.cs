@@ -79,13 +79,13 @@ namespace D3.Commission
                     {
                         while (dr.Read())
                         {
-                            rates.Add(dr[Constants.Training]);
-                            rates.Add(dr[Constants.Project]);
-                            rates.Add(dr[Constants.Tier1]);
-                            rates.Add(dr[Constants.Tier2]);
-                            rates.Add(dr[Constants.Renewal]);
-                            rates.Add(dr[Constants.Incomplete]);
-                            rates.Add(dr[Constants.Prior]);
+                            rates.Add(dr["Training"]);
+                            rates.Add(dr["Project"]);
+                            rates.Add(dr["Tier1"]);
+                            rates.Add(dr["Tier2"]);
+                            rates.Add(dr["Renewal"]);
+                            rates.Add(dr["Incomplete"]);
+                            rates.Add(dr["Prior"]);
                         }
                     }
                 }
@@ -124,7 +124,7 @@ namespace D3.Commission
                     {
                         while (dr.Read())
                         {
-                            dataLine = new Object[14];
+                            dataLine = new Object[15];
                             dataLine[0] = true;
 
                             for (int i = 1; i < 7; i++)
@@ -169,10 +169,14 @@ namespace D3.Commission
                                 dataLine[9] = String.Format("${0:f}", price);
                                 dataLine[10] = String.Format("${0:f}", profit);
                             }
+                            if (dr["OpportunityID"] != DBNull.Value)
+                            {
+                                dataLine[11] = Convert.ToString(dr["OpportunityID"]);
+                            }
 
-                            dataLine[11] = rate;
-                            dataLine[12] = String.Format("%{0:f}", profit / price * 100);
-                            dataLine[13] = "false";
+                            dataLine[12] = rate;
+                            dataLine[13] = String.Format("%{0:f}", profit / price * 100);
+                            dataLine[14] = "false";
 
                             temp.Add(dataLine);
                         }
@@ -214,7 +218,7 @@ namespace D3.Commission
                     {
                         while (dr.Read())
                         {
-                            dataLine = new Object[14];
+                            dataLine = new Object[15];
                             dataLine[0] = true;
                             if (dr["Type"] != DBNull.Value)
                             {
@@ -304,8 +308,12 @@ namespace D3.Commission
                             {
                                 dataLine[11] = "";
                             }
-                            dataLine[12] = rate;
-                            dataLine[13] = "false";
+                            if (dr["OpportunityID"] != DBNull.Value)
+                            {
+                                dataLine[12] = Convert.ToString(dr["OpportunityID"]);
+                            }
+                            dataLine[13] = rate;
+                            dataLine[14] = "false";
                             temp.Add(dataLine);
                         }
                         projectData = new Object[temp.Count];
@@ -345,7 +353,7 @@ namespace D3.Commission
                     {
                         while (dr.Read())
                         {
-                            dataLine = new Object[14];
+                            dataLine = new Object[15];
                             dataLine[0] = true;
 
                             if (dr["Type"] != DBNull.Value)
@@ -412,33 +420,37 @@ namespace D3.Commission
                             {
                                 dataLine[8] = "";
                             }
-                            if (dr["ExtendedCost"] != DBNull.Value)
+                            if (dr["Quantity"] != DBNull.Value)
                             {
-                                dataLine[9] = String.Format("${0:f}", Convert.ToDecimal(dr["ExtendedCost"]));
+                                dataLine[9] = String.Format("{0:f}", Convert.ToDecimal(dr["Quantity"]));
                             }
                             else
                             {
                                 dataLine[9] = "";
                             }
-                            if (dr["ExtendedPrice"] != DBNull.Value)
+                            if (dr["ExtendedCost"] != DBNull.Value)
                             {
-                                dataLine[10] = String.Format("${0:f}", Convert.ToDecimal(dr["ExtendedPrice"]));
+                                dataLine[10] = String.Format("${0:f}", Convert.ToDecimal(dr["ExtendedCost"]));
                             }
                             else
                             {
                                 dataLine[10] = "";
                             }
-                            if (dr["Quantity"] != DBNull.Value)
+                            if (dr["ExtendedPrice"] != DBNull.Value)
                             {
-                                dataLine[11] = String.Format("{0:f}", Convert.ToDecimal(dr["Quantity"]));
+                                dataLine[11] = String.Format("${0:f}", Convert.ToDecimal(dr["ExtendedPrice"]));
                             }
                             else
                             {
                                 dataLine[11] = "";
-                            } 
-                            
-                            dataLine[12] = rate;
-                            dataLine[13] = "false";
+                            }
+                            if (dr["OpportunityID"] != DBNull.Value)
+                            {
+                                dataLine[12] = Convert.ToString(dr["OpportunityID"]);
+                            }
+
+                            dataLine[13] = rate;
+                            dataLine[14] = "false";
                             temp.Add(dataLine);
                         }
                         tier1Data = new Object[temp.Count];
@@ -478,7 +490,7 @@ namespace D3.Commission
                     {
                         while (dr.Read())
                         {
-                            dataLine = new Object[14];
+                            dataLine = new Object[15];
                             dataLine[0] = true;
 
                             if (dr["Type"] != DBNull.Value)
@@ -545,33 +557,37 @@ namespace D3.Commission
                             {
                                 dataLine[8] = "";
                             }
-                            if (dr["ExtendedCost"] != DBNull.Value)
+                            if (dr["Quantity"] != DBNull.Value)
                             {
-                                dataLine[9] = String.Format("${0:f}", Convert.ToDecimal(dr["ExtendedCost"]));
+                                dataLine[9] = String.Format("{0:f}", Convert.ToDecimal(dr["Quantity"]));
                             }
                             else
                             {
                                 dataLine[9] = "";
                             }
-                            if (dr["ExtendedPrice"] != DBNull.Value)
+                            if (dr["ExtendedCost"] != DBNull.Value)
                             {
-                                dataLine[10] = String.Format("${0:f}", Convert.ToDecimal(dr["ExtendedPrice"]));
+                                dataLine[10] = String.Format("${0:f}", Convert.ToDecimal(dr["ExtendedCost"]));
                             }
                             else
                             {
                                 dataLine[10] = "";
                             }
-                            if (dr["Quantity"] != DBNull.Value)
+                            if (dr["ExtendedPrice"] != DBNull.Value)
                             {
-                                dataLine[11] = String.Format("{0:f}", Convert.ToDecimal(dr["Quantity"]));
+                                dataLine[11] = String.Format("${0:f}", Convert.ToDecimal(dr["ExtendedPrice"]));
                             }
                             else
                             {
                                 dataLine[11] = "";
                             }
+                            if (dr["OpportunityID"] != DBNull.Value)
+                            {
+                                dataLine[12] = Convert.ToString(dr["OpportunityID"]);
+                            }
 
-                            dataLine[12] = rate;
-                            dataLine[13] = "false";
+                            dataLine[13] = rate;
+                            dataLine[14] = "false";
                             temp.Add(dataLine);
                         }
                         tier2Data = new Object[temp.Count];
@@ -611,7 +627,7 @@ namespace D3.Commission
                     {
                         while (dr.Read())
                         {
-                            dataLine = new Object[14];
+                            dataLine = new Object[15];
                             dataLine[0] = true;
 
                             if (dr["Type"] != DBNull.Value)
@@ -678,33 +694,37 @@ namespace D3.Commission
                             {
                                 dataLine[8] = "";
                             }
-                            if (dr["ExtendedCost"] != DBNull.Value)
+                            if (dr["Quantity"] != DBNull.Value)
                             {
-                                dataLine[9] = String.Format("${0:f}", Convert.ToDecimal(dr["ExtendedCost"]));
+                                dataLine[9] = String.Format("{0:f}", Convert.ToDecimal(dr["Quantity"]));
                             }
                             else
                             {
                                 dataLine[9] = "";
                             }
-                            if (dr["ExtendedPrice"] != DBNull.Value)
+                            if (dr["ExtendedCost"] != DBNull.Value)
                             {
-                                dataLine[10] = String.Format("${0:f}", Convert.ToDecimal(dr["ExtendedPrice"]));
+                                dataLine[10] = String.Format("${0:f}", Convert.ToDecimal(dr["ExtendedCost"]));
                             }
                             else
                             {
                                 dataLine[10] = "";
                             }
-                            if (dr["Quantity"] != DBNull.Value)
+                            if (dr["ExtendedPrice"] != DBNull.Value)
                             {
-                                dataLine[11] = String.Format("{0:f}", Convert.ToDecimal(dr["Quantity"]));
+                                dataLine[11] = String.Format("${0:f}", Convert.ToDecimal(dr["ExtendedPrice"]));
                             }
                             else
                             {
                                 dataLine[11] = "";
                             }
+                            if (dr["OpportunityID"] != DBNull.Value)
+                            {
+                                dataLine[12] = Convert.ToString(dr["OpportunityID"]);
+                            }
 
-                            dataLine[12] = rate;
-                            dataLine[13] = "false";
+                            dataLine[13] = rate;
+                            dataLine[14] = "false";
                             temp.Add(dataLine);
                         }
                         renewalData = new Object[temp.Count];

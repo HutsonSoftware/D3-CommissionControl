@@ -36,7 +36,8 @@ SELECT
 	ContactName, 
 	ProductName, 
 	ExtendedCost, 
-	ExtendedPrice
+	ExtendedPrice,
+	OpportunityID
 FROM dbo.Projects WITH (NOLOCK)
 WHERE CommissionDate IS NULL 
 	AND datefulfilled IS NOT NULL 
