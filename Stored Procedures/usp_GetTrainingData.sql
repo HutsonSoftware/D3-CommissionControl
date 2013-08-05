@@ -49,6 +49,7 @@ WHERE so.statecodename = 'Fulfilled'
 	AND aid.d3_commissionpaid IS NULL 
 	AND o.owneridname = @SalesPersonName 
 	AND i.d3_invoicedate >= DATEADD(day, 4, @StartDate) AND i.d3_invoicedate < DATEADD(day, 5, @EndDate) 
+	AND i.statecode <> 3
 ORDER BY o.name, so.d3_eventtrainingidname
 
 GO

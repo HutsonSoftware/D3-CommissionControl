@@ -37,12 +37,13 @@ FROM
 		SUM(id.extendedamount) Price
 	FROM dbo.FilteredInvoice i WITH (NOLOCK)
 	INNER JOIN dbo.FilteredInvoiceDetail id WITH (NOLOCK) ON i.invoiceid = id.invoiceid 
-	WHERE i.opportunityid IN 
-	(	SELECT opportunityid
-		FROM dbo.FilteredOpportunity WITH (NOLOCK)
-		WHERE owneridname = @SalesPersonName 
-			AND estimatedclosedate < DATEADD(day, 5, @EndDate)
-	)
+	WHERE i.statecode <> 3
+		AND i.opportunityid IN 
+		(	SELECT opportunityid
+			FROM dbo.FilteredOpportunity WITH (NOLOCK)
+			WHERE owneridname = @SalesPersonName 
+				AND estimatedclosedate < DATEADD(day, 5, @EndDate)
+		)
 		AND id.productid IN 
 		(	SELECT productid 
 			FROM dbo.FilteredProduct WITH (NOLOCK) 
@@ -56,17 +57,19 @@ INNER JOIN
 		o.owneridname Owner, 
 		o.d3_companyidname Company, 
 		o.opportunityid, 
-		SUM(p.currentcost * op.quantity) estcost, 
+		SUM((p.currentcost * op.quantity)*((100 - op.d3_autodeskdiscount)/100)) estcost, 
 		o.estimatedclosedate
 	FROM dbo.FilteredProduct p WITH (NOLOCK) 
 	INNER JOIN dbo.FilteredOpportunityProduct op WITH (NOLOCK) ON p.productid = op.productid 
 	INNER JOIN dbo.FilteredOpportunity o WITH (NOLOCK) ON op.opportunityid = o.opportunityid
+	LEFT JOIN dbo.StringMap sm WITH (NOLOCK) ON	p.d3_autodeskproduct = sm.AttributeValue and sm.AttributeName = 'd3_autodeskproduct'
 	WHERE o.owneridname = @SalesPersonName 
 		AND o.estimatedclosedate < DATEADD(day, 5, @EndDate)
 		AND o.d3_estimatedcommissionpaid IS NULL
 		AND o.statecodename = N'Won' 
 		AND o.estimatedclosedate > CONVERT(DATETIME, '2009-06-01 00:00:00', 102)
 		AND p.d3_category1name IN ('Training', 'Services') 
+		AND sm.Value <> 'CADSupport'
 		AND o.opportunityid IN
 		(	SELECT DISTINCT o.opportunityid
 			FROM dbo.FilteredOpportunity o WITH (NOLOCK) 

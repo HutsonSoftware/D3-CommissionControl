@@ -64,6 +64,7 @@ FROM
 		AND o.owneridname = @SalesPersonName 
 		AND i.d3_invoicedate >= DATEADD(day, 4, @StartDate) 
 		AND i.d3_invoicedate < DATEADD(day, 5, @EndDate) 
+		AND i.statecode <> 3
 		
 	UNION
 

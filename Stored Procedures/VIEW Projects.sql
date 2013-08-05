@@ -43,6 +43,7 @@ INNER JOIN dbo.FilteredOpportunity ON dbo.FilteredD3_project.d3_opportunityid = 
 INNER JOIN dbo.FilteredInvoiceDetail ON dbo.FilteredD3_project.d3_projectid = dbo.FilteredInvoiceDetail.d3_projectid 
 INNER JOIN dbo.FilteredSystemUser ON dbo.FilteredOpportunity.ownerid = dbo.FilteredSystemUser.systemuserid
 WHERE dbo.FilteredOpportunity.d3_estimatedcommissionpaid is null
+	AND dbo.FilteredInvoiceDetail.InvoiceID NOT IN (SELECT InvoiceID FROM dbo.FilteredInvoice WHERE statecode = 3)
 UNION
 SELECT 
 	FilteredOpportunity.owneridname AS SalesPersonName, 

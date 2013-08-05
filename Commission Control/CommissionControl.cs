@@ -2259,13 +2259,13 @@ namespace D3.Commission
 
         private void Tier1Grid_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 0 || e.ColumnIndex == 13)
+            if (e.ColumnIndex == 0 || e.ColumnIndex == 12)
             {
                 CalculateTier1Totals();
                 CalculateBigTotal();
                 Tier1Grid["isDirty", e.RowIndex].Value = "true";
             }
-            else if (e.ColumnIndex != 13 && e.ColumnIndex != 14)
+            else if (e.ColumnIndex != 12 && e.ColumnIndex != 13)
             {
                 MessageBox.Show("DO NOT CHANGE VALUES WITHIN THE GRID");
             }
@@ -2494,13 +2494,13 @@ namespace D3.Commission
 
         void Tier2Grid_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 0 || e.ColumnIndex == 13)
+            if (e.ColumnIndex == 0 || e.ColumnIndex == 12)
             {
                 CalculateTier2Totals();
                 CalculateBigTotal();
                 Tier2Grid["isDirty", e.RowIndex].Value = "true";
             }
-            else if (e.ColumnIndex != 13 && e.ColumnIndex != 14)
+            else if (e.ColumnIndex != 12 && e.ColumnIndex != 13)
             {
                 MessageBox.Show("DO NOT CHANGE VALUES WITHIN THE GRID");
             }
@@ -2703,13 +2703,13 @@ namespace D3.Commission
 
         void RenewalGrid_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 0 || e.ColumnIndex == 13)
+            if (e.ColumnIndex == 0 || e.ColumnIndex == 12)
             {
                 CalculateRenewalTotals();
                 CalculateBigTotal();
                 RenewalGrid["isDirty", e.RowIndex].Value = "true";
             }
-            else if (e.ColumnIndex != 13 && e.ColumnIndex != 14)
+            else if (e.ColumnIndex != 12 && e.ColumnIndex != 13)
             {
                 MessageBox.Show("DO NOT CHANGE VALUES WITHIN THE GRID");
             }
@@ -3245,6 +3245,12 @@ namespace D3.Commission
             sPriorActualCost.Text = String.Format("${0:f}", actualCost);
             sPriorDifference.Text = String.Format("${0:f}", difference);
             sPriorCommission.Text = String.Format("${0:f}", commission);
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            about.ShowDialog();
         }
 
         //private ArrayList RetrievePriorIdsFromGrid()

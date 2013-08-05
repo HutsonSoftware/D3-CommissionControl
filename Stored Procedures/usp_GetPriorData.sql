@@ -45,6 +45,7 @@ FROM
 		AND o.owneridname = @SalesPersonName
 		AND o.estimatedclosedate < DATEADD(day, 5, @EndDate)
 		AND id.d3_commissionpaid IS NULL
+		AND i.statecode <> 3
 	GROUP BY o.opportunityid, id.d3_commissionpaid
 ) Invoices 
 INNER JOIN
