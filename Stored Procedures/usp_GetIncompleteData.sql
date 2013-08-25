@@ -16,7 +16,7 @@ GO
 	
 */
 
-ALTER PROCEDURE dbo.usp_GetIncompleteData
+ALTER PROCEDURE [dbo].[usp_GetIncompleteData]
 	@SalesPersonName VARCHAR(MAX),
 	@EndDate DATETIME
 AS
@@ -47,7 +47,7 @@ FROM
 		AND id.productid IN 
 		(	SELECT productid 
 			FROM dbo.FilteredProduct WITH (NOLOCK) 
-			WHERE producttypecodename IN (N'Training',N'Services')
+			WHERE producttypecodename IN (N'Training',N'Services')AND ((d3_autodeskproductname <> 'CADSupport'and d3_autodeskproductname <> 'DMSupport') or  d3_autodeskproductname is null)
 		)
 	GROUP BY i.opportunityid
 ) Invoices 
@@ -62,14 +62,14 @@ INNER JOIN
 	FROM dbo.FilteredProduct p WITH (NOLOCK) 
 	INNER JOIN dbo.FilteredOpportunityProduct op WITH (NOLOCK) ON p.productid = op.productid 
 	INNER JOIN dbo.FilteredOpportunity o WITH (NOLOCK) ON op.opportunityid = o.opportunityid
-	LEFT JOIN dbo.StringMap sm WITH (NOLOCK) ON	p.d3_autodeskproduct = sm.AttributeValue and sm.AttributeName = 'd3_autodeskproduct'
+	
 	WHERE o.owneridname = @SalesPersonName 
 		AND o.estimatedclosedate < DATEADD(day, 5, @EndDate)
 		AND o.d3_estimatedcommissionpaid IS NULL
 		AND o.statecodename = N'Won' 
 		AND o.estimatedclosedate > CONVERT(DATETIME, '2009-06-01 00:00:00', 102)
-		AND p.d3_category1name IN ('Training', 'Services') 
-		AND sm.Value <> 'CADSupport'
+		AND p.d3_category1name IN ('Training', 'Services', 'Services - Consulting') 
+		AND ((p.d3_autodeskproductname <> 'CADSupport' and p.d3_autodeskproductname <> 'DMSupport') or  p.d3_autodeskproductname is null)
 		AND o.opportunityid IN
 		(	SELECT DISTINCT o.opportunityid
 			FROM dbo.FilteredOpportunity o WITH (NOLOCK) 
@@ -79,9 +79,9 @@ INNER JOIN
 			WHERE o.owneridname = @SalesPersonName 
 				AND o.estimatedclosedate < DATEADD(day, 5, @EndDate)
 				AND a.d3_eventid IN 
-				(	SELECT d3_eventtrainingid 
-					FROM dbo.FilteredD3_EventTraining WITH (NOLOCK)
-					WHERE d3_statename <> N'Complete'
+				(	SELECT et.d3_eventtrainingid 
+					FROM dbo.FilteredD3_EventTraining et WITH (NOLOCK) inner join dbo.FilteredSalesOrder so with (nolock) on et.d3_eventtrainingid = so.d3_eventtrainingid
+					WHERE so.statecodename = 'Active'
 				)
 			
 			UNION

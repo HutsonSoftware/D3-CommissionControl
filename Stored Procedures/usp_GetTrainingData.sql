@@ -16,7 +16,7 @@ GO
 			
 */
 
-ALTER PROCEDURE dbo.usp_GetTrainingData
+ALTER PROCEDURE [dbo].[usp_GetTrainingData]
 	@SalesPersonName VARCHAR(MAX),
 	@EndDate DATETIME
 AS
@@ -50,6 +50,29 @@ WHERE so.statecodename = 'Fulfilled'
 	AND o.owneridname = @SalesPersonName 
 	AND i.d3_invoicedate >= DATEADD(day, 4, @StartDate) AND i.d3_invoicedate < DATEADD(day, 5, @EndDate) 
 	AND i.statecode <> 3
+		and o.opportunityid not in (SELECT DISTINCT oe.opportunityid
+			FROM dbo.FilteredOpportunity oe WITH (NOLOCK) 
+			INNER JOIN dbo.FilteredInvoice ie  WITH (NOLOCK) ON oe.opportunityid = ie.opportunityid
+			INNER JOIN dbo.FilteredD3_attendeeinvoicedetail aide WITH (NOLOCK) ON ie.invoiceid = aide.d3_invoiceid
+			INNER JOIN dbo.FilteredD3_Attendee ae WITH (NOLOCK) ON aide.d3_attendeeinvoicedetailid = ae.d3_attendeeinvoicedetailid
+			WHERE ae.d3_eventid IN 
+				(	SELECT et.d3_eventtrainingid 
+					FROM dbo.FilteredD3_EventTraining et WITH (NOLOCK) inner join dbo.FilteredSalesOrder so with (nolock) on et.d3_eventtrainingid = so.d3_eventtrainingid
+					WHERE so.statecodename = 'Active'
+				))
+	and o.opportunityid not in (			SELECT DISTINCT fi.opportunityid
+			FROM dbo.FilteredInvoice fi WITH (NOLOCK) 
+			WHERE fi.statecode <> 3
+				AND fi.invoiceid IN 
+				(	SELECT d3_invoiceid 
+					FROM dbo.FilteredD3_attendeeinvoicedetail faid WITH (NOLOCK)
+					WHERE faid.d3_attendeeinvoicedetailid NOT IN 
+					(	SELECT fa.d3_attendeeinvoicedetailid 
+						FROM dbo.FilteredD3_Attendee fa WITH (NOLOCK) 
+						WHERE fa.d3_attendeeinvoicedetailid IS NOT NULL
+					)
+				))
+	and o.d3_estimatedcommissionpaid is null
 ORDER BY o.name, so.d3_eventtrainingidname
 
 GO
