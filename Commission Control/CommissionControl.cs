@@ -2259,13 +2259,13 @@ namespace D3.Commission
 
         private void Tier1Grid_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 0 || e.ColumnIndex == 12)
+            if (e.ColumnIndex == 0 || e.ColumnIndex == 13)
             {
                 CalculateTier1Totals();
                 CalculateBigTotal();
                 Tier1Grid["isDirty", e.RowIndex].Value = "true";
             }
-            else if (e.ColumnIndex != 12 && e.ColumnIndex != 13)
+            else if (e.ColumnIndex != 13 && e.ColumnIndex != 14)
             {
                 MessageBox.Show("DO NOT CHANGE VALUES WITHIN THE GRID");
             }
@@ -2494,13 +2494,13 @@ namespace D3.Commission
 
         void Tier2Grid_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 0 || e.ColumnIndex == 12)
+            if (e.ColumnIndex == 0 || e.ColumnIndex == 13)
             {
                 CalculateTier2Totals();
                 CalculateBigTotal();
                 Tier2Grid["isDirty", e.RowIndex].Value = "true";
             }
-            else if (e.ColumnIndex != 12 && e.ColumnIndex != 13)
+            else if (e.ColumnIndex != 13 && e.ColumnIndex != 14)
             {
                 MessageBox.Show("DO NOT CHANGE VALUES WITHIN THE GRID");
             }
@@ -2703,13 +2703,13 @@ namespace D3.Commission
 
         void RenewalGrid_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 0 || e.ColumnIndex == 12)
+            if (e.ColumnIndex == 0 || e.ColumnIndex == 13)
             {
                 CalculateRenewalTotals();
                 CalculateBigTotal();
                 RenewalGrid["isDirty", e.RowIndex].Value = "true";
             }
-            else if (e.ColumnIndex != 12 && e.ColumnIndex != 13)
+            else if (e.ColumnIndex != 13 && e.ColumnIndex != 14)
             {
                 MessageBox.Show("DO NOT CHANGE VALUES WITHIN THE GRID");
             }

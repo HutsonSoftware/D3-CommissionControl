@@ -60,7 +60,8 @@ FROM
 	INNER JOIN dbo.FilteredSystemUser su WITH (NOLOCK) ON o.ownerid = su.systemuserid
 	WHERE o.statecodename = 'Won' 
 		AND p.d3_commissioncategoryname = 'Sub Renewal' 
-		AND id.d3_commissionpaid IS NULL 
+		AND id.d3_commissionpaid IS NULL
+		AND id.d3_projectid IS NULL 
 		AND o.owneridname = @SalesPersonName 
 		AND i.d3_invoicedate >= @StartDate
 		AND i.d3_invoicedate <= @EndDate 

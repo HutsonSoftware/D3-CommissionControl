@@ -61,6 +61,7 @@ FROM
 	WHERE o.statecodename = 'Won' 
 		AND p.d3_commissioncategoryname = 'Tier 1' 
 		AND id.d3_commissionpaid IS NULL 
+		AND id.d3_projectid IS NULL
 		AND o.owneridname = @SalesPersonName 
 		AND i.d3_invoicedate >= @StartDate 
 		AND i.d3_invoicedate <= DATEADD(DAY, 5, @EndDate) 
